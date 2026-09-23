@@ -26,9 +26,19 @@
   :root:not([data-theme="light"]) .btn{background:var(--gold);color:#111;border-color:var(--gold)}
   :root:not([data-theme="light"]) .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
   :root:not([data-theme="light"]) .card .short{background:var(--gold);color:#111}
+  :root:not([data-theme="light"]) .pill{background:var(--gold);color:#111}
+  :root:not([data-theme="light"]) .seg-btn[aria-pressed="true"]{background:var(--gold);color:#111}
+  :root:not([data-theme="light"]) .btn-gold{background:#d9ad3a;border-color:#d9ad3a;color:#111}
+  :root:not([data-theme="light"]) .card:hover{border-color:#e6d08f;box-shadow:0 14px 30px rgba(0,0,0,.5)}
+  :root:not([data-theme="light"]) .card{border-top-color:var(--accent,var(--gold))}
 }
 
 :root[data-theme="dark"] .chip[aria-pressed="true"]{background:var(--gold);color:#111;border-color:var(--gold)}
 :root[data-theme="dark"] .btn{background:var(--gold);color:#111;border-color:var(--gold)}
 :root[data-theme="dark"] .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
 :root[data-theme="dark"] .card .short{background:var(--gold);color:#111}
+:root[data-theme="dark"] .pill{background:var(--gold);color:#111}
+:root[data-theme="dark"] .seg-btn[aria-pressed="true"]{background:var(--gold);color:#111}
+:root[data-theme="dark"] .btn-gold{background:#d9ad3a;border-color:#d9ad3a;color:#111}
+:root[data-theme="dark"] .card:hover{border-color:#e6d08f;box-shadow:0 14px 30px rgba(0,0,0,.5)}
+:root[data-theme="dark"] .card{border-top-color:var(--accent,var(--gold))}

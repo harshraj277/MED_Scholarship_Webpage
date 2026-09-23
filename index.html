@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/components.css">
 <link rel="stylesheet" href="assets/css/themes.css">
+<link rel="stylesheet" href="assets/css/print.css" media="print">
 </head>
 <body>
 <a class="skip" href="#finder">Skip to schemes</a>
@@ -39,6 +40,10 @@
       <h1>The bridge between you and government health schemes</h1>
       <p class="hi">सरकारी स्वास्थ्य योजनाओं तक पहुँचने का सेतु</p>
       <p class="lead">See which central government health schemes fit your situation, what they pay for, and where to apply. No jargon, no sign-up.</p>
+      <div class="hero-cta">
+        <a class="btn btn-hero" href="#finder">Find my scheme <span aria-hidden="true">↓</span></a>
+        <p class="trust"><b id="schemeCount">23</b> schemes · data compiled 10 Sep 2026</p>
+      </div>
     </div>
     <div class="mark"><img src="assets/img/logo.webp" alt="Yojana Setu emblem" width="300" height="300"></div>
   </div>
@@ -56,9 +61,11 @@
 <section class="finder" id="finder">
   <div class="wrap">
     <div class="bar">
-      <div class="s"><label class="f" for="q">Search by name or topic</label><input id="q" type="search" placeholder="Try “dialysis”, “delivery” or “PM-JAY”"></div>
+      <div class="s"><label class="f" for="q">Search by name or topic</label><div class="input-wrap"><input id="q" type="search" placeholder="Try “dialysis”, “delivery” or “PM-JAY”"><button id="qClear" class="q-clear" type="button" aria-label="Clear search">×</button></div></div>
       <div><label class="f" for="cat">Type of help</label><select id="cat"></select></div>
-      <div><label class="f" for="stat">Status</label><select id="stat"><option value="">All</option><option value="active">Active</option><option value="legacy">Legacy</option></select></div>
+      <div><label class="f" for="age">Age group</label><select id="age"></select></div>
+      <div><label class="f" for="income">Max monthly income (₹)</label><div class="input-wrap inc-wrap"><input id="income" type="number" min="0" step="500" inputmode="numeric" placeholder="e.g. 10000"><button id="incClear" class="q-clear" type="button" aria-label="Clear income">×</button></div></div>
+      <div><label class="f" id="statLbl">Status</label><div class="seg" id="statSeg" role="group" aria-labelledby="statLbl"><button class="seg-btn" type="button" data-stat="" aria-pressed="true">All</button><button class="seg-btn" type="button" data-stat="active">Active</button><button class="seg-btn" type="button" data-stat="legacy">Legacy</button></div></div>
       <div><label class="f" for="sort">Sort by</label><select id="sort"><option value="cat">Type of help</option><option value="az">Name A–Z</option><option value="new">Newest first</option><option value="old">Oldest first</option></select></div>
     </div>
     <div class="meta">
@@ -66,9 +73,11 @@
       <button class="clear" id="clear" type="button">Clear all filters</button>
     </div>
     <div class="grid" id="grid"></div>
-    <div class="more-wrap" id="moreWrap">
-      <button class="btn" id="moreBtn" type="button">See more schemes</button>
-    </div>
+    <nav class="pages" id="pages" aria-label="Pagination">
+      <button class="btn ghost" id="prevBtn" type="button" aria-label="Previous page">← Previous</button>
+      <span class="page-info" id="pageInfo">Page 1</span>
+      <button class="btn" id="nextBtn" type="button" aria-label="Next page">Next →</button>
+    </nav>
   </div>
 </section>
 
@@ -90,6 +99,16 @@
       <h2>Yojana Setu</h2>
       <p><strong>Information only.</strong> This is not an official government portal. Amounts and eligibility change, so confirm on the scheme's official website before you apply.</p>
       <p>Covers central government health schemes. State schemes are not included yet. Data compiled on 10 September 2026.</p>
+    </div>
+    <div class="f-links">
+      <h2>Browse by category</h2>
+      <ul>
+        <li><button class="fq" type="button" data-cat="Health Insurance / Financial Protection">Health insurance &amp; financial protection</button></li>
+        <li><button class="fq" type="button" data-cat="Maternal &amp; Child Health">Mother &amp; child care</button></li>
+        <li><button class="fq" type="button" data-cat="Immunization">Immunisation</button></li>
+        <li><button class="fq" type="button" data-cat="Medicine Access">Affordable medicines</button></li>
+        <li><button class="fq" type="button" data-cat="Mental Health">Mental health support</button></li>
+      </ul>
     </div>
     <div class="partner">
       <img src="assets/img/institution.webp" alt="Modern Education Society's College of Engineering, Pune" width="84" height="84">

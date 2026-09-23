@@ -24,7 +24,11 @@
     "audience": [
       "family",
       "senior"
-    ]
+    ],
+    "age_group": [
+      "all"
+    ],
+    "income_max_annual": 120000
   },
   {
     "id": "RAN",
@@ -49,7 +53,11 @@
     "audience": [
       "patient",
       "family"
-    ]
+    ],
+    "age_group": [
+      "all"
+    ],
+    "income_max_annual": 100000
   },
   {
     "id": "RSBY",
@@ -73,7 +81,11 @@
     ],
     "audience": [
       "family"
-    ]
+    ],
+    "age_group": [
+      "all"
+    ],
+    "income_max_annual": 100000
   },
   {
     "id": "AB-HWC",
@@ -98,7 +110,11 @@
     ],
     "audience": [
       "family"
-    ]
+    ],
+    "age_group": [
+      "all"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "PM-ABHIM",
@@ -121,7 +137,11 @@
       "Integrated health information portal",
       "Support for urban and rural health centres"
     ],
-    "audience": []
+    "audience": [],
+    "age_group": [
+      "all"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "NHM",
@@ -147,7 +167,11 @@
     "audience": [
       "mother",
       "child"
-    ]
+    ],
+    "age_group": [
+      "all"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "PMSSY",
@@ -169,7 +193,11 @@
       "Upgraded government medical colleges",
       "Expands tertiary care access"
     ],
-    "audience": []
+    "audience": [],
+    "age_group": [
+      "all"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "CGHS",
@@ -195,7 +223,11 @@
     "audience": [
       "worker",
       "senior"
-    ]
+    ],
+    "age_group": [
+      "all"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "ESIC",
@@ -220,7 +252,12 @@
     ],
     "audience": [
       "worker"
-    ]
+    ],
+    "age_group": [
+      "adult",
+      "child"
+    ],
+    "income_max_annual": 252000
   },
   {
     "id": "JSY",
@@ -244,7 +281,11 @@
     ],
     "audience": [
       "mother"
-    ]
+    ],
+    "age_group": [
+      "adult"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "JSSK",
@@ -270,7 +311,12 @@
     "audience": [
       "mother",
       "child"
-    ]
+    ],
+    "age_group": [
+      "adult",
+      "child"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "RBSK",
@@ -295,7 +341,11 @@
     ],
     "audience": [
       "child"
-    ]
+    ],
+    "age_group": [
+      "child"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "PMSMA",
@@ -319,7 +369,11 @@
     ],
     "audience": [
       "mother"
-    ]
+    ],
+    "age_group": [
+      "adult"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "MI",
@@ -344,7 +398,12 @@
     "audience": [
       "child",
       "mother"
-    ]
+    ],
+    "age_group": [
+      "child",
+      "adult"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "UIP",
@@ -369,7 +428,12 @@
     "audience": [
       "child",
       "mother"
-    ]
+    ],
+    "age_group": [
+      "child",
+      "adult"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "NTEP",
@@ -394,7 +458,11 @@
     ],
     "audience": [
       "patient"
-    ]
+    ],
+    "age_group": [
+      "all"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "NACP",
@@ -419,7 +487,11 @@
     ],
     "audience": [
       "patient"
-    ]
+    ],
+    "age_group": [
+      "all"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "PMNDP",
@@ -444,7 +516,11 @@
     "audience": [
       "patient",
       "family"
-    ]
+    ],
+    "age_group": [
+      "all"
+    ],
+    "income_max_annual": 100000
   },
   {
     "id": "PMBJP",
@@ -470,7 +546,11 @@
       "family",
       "senior",
       "patient"
-    ]
+    ],
+    "age_group": [
+      "all"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "ABDM",
@@ -493,7 +573,11 @@
       "Share records only with your consent",
       "Works with the ABHA app"
     ],
-    "audience": []
+    "audience": [],
+    "age_group": [
+      "all"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "NMHP",
@@ -517,7 +601,11 @@
     ],
     "audience": [
       "patient"
-    ]
+    ],
+    "age_group": [
+      "all"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "POSHAN",
@@ -543,7 +631,12 @@
     "audience": [
       "mother",
       "child"
-    ]
+    ],
+    "age_group": [
+      "child",
+      "adult"
+    ],
+    "income_max_annual": null
   },
   {
     "id": "NAM",
@@ -565,6 +658,10 @@
       "Support for AYUSH colleges",
       "Quality control of AYUSH drugs"
     ],
-    "audience": []
+    "audience": [],
+    "age_group": [
+      "all"
+    ],
+    "income_max_annual": null
   }
 ]
