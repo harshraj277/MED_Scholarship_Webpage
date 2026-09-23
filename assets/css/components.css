@@ -1,0 +1,118 @@
+/* ============================================================
+   Yojana Setu – components.css
+   All UI component styles: header, hero, chips, finder cards,
+   how-it-works, footer, compare tray, dialogs and toast.
+   Dark-theme overrides live in themes.css (loaded last).
+   ============================================================ */
+
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:20;background:var(--navy-deep);color:#fff;border-bottom:2px solid var(--gold);padding-top:env(safe-area-inset-top,0px)}
+.top .wrap{display:flex;align-items:center;gap:1rem;min-height:64px}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.brand img{width:44px;height:44px;border-radius:50%;display:block}
+.brand b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.35rem;font-weight:700;letter-spacing:.01em}
+.brand small{display:block;font-size:.72rem;color:var(--gold-soft);line-height:1;margin-top:2px}
+.nav{margin-left:auto;display:flex;align-items:center;gap:.4rem}
+.nav a,.nav button{background:none;border:1px solid transparent;color:#fff;text-decoration:none;padding:.45rem .8rem;border-radius:999px;font-size:.95rem}
+.nav a:hover,.nav button:hover{border-color:var(--gold)}
+.nav .count{background:var(--gold);color:#111;border-radius:999px;padding:0 .5rem;margin-left:.3rem;font-weight:600;font-size:.85rem}
+@media (max-width:640px){.nav a.hide-s{display:none}.brand small{display:none}}
+
+/* ---------- hero ---------- */
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-140px;top:-90px;width:520px;height:520px;border-radius:50%;border:3px solid var(--gold);opacity:.55;pointer-events:none}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .75fr;gap:2.5rem;padding:3.5rem 0 4.5rem;align-items:center}
+.hero h1{font-size:clamp(2.3rem,5.4vw,4rem);font-weight:700;max-width:14ch}
+.hero .hi{font-size:1.2rem;color:var(--gold-soft);margin:1rem 0 0}
+.hero p.lead{max-width:52ch;font-size:1.15rem;margin:1rem 0 0;color:#dbe4f5}
+.hero .mark{justify-self:center}
+.hero .mark img{width:min(300px,60vw);border-radius:50%;box-shadow:0 0 0 6px rgba(199,155,43,.25);display:block}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding:2.5rem 0 3.5rem}.hero .mark{display:none}}
+
+/* ---------- audience chips ---------- */
+.who{margin-top:-2.2rem;position:relative;z-index:2}
+.who .panel{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:10px;padding:1.2rem 1.3rem;box-shadow:0 10px 30px rgba(8,28,61,.14)}
+.who h2{font-size:1.25rem;margin-bottom:.7rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{background:var(--chip);border:1.5px solid transparent;border-radius:999px;padding:.5rem 1rem;font-size:1rem}
+.chip:hover{border-color:var(--navy)}
+.chip[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* ---------- finder ---------- */
+.finder{padding:2.5rem 0 3rem}
+.bar{display:grid;grid-template-columns:2fr 1.2fr 1fr 1fr;gap:.7rem;margin-bottom:1rem}
+@media (max-width:860px){.bar{grid-template-columns:1fr 1fr}.bar .s{grid-column:1/-1}}
+@media (max-width:480px){.bar{grid-template-columns:1fr}}
+label.f{display:block;font-size:.85rem;color:var(--muted);margin-bottom:.2rem}
+input[type=search],select{width:100%;font:inherit;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:8px;padding:.6rem .7rem;min-height:46px}
+.meta{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:baseline;margin:1.2rem 0 1rem}
+.meta h2{font-size:1.6rem}
+.meta .clear{background:none;border:0;text-decoration:underline;color:var(--muted);padding:.3rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.1rem 1.15rem 1rem;display:flex;flex-direction:column;gap:.55rem;position:relative}
+.card.legacy{border-style:dashed}
+.card .cat{font-size:.85rem;color:var(--muted)}
+.card h3{font-size:1.2rem}
+.card .short{display:inline-block;background:var(--navy);color:#fff;border-radius:4px;padding:0 .45rem;font-size:.8rem;font-weight:600;margin-right:.4rem;vertical-align:2px}
+.card .cover{margin:0;font-size:1rem}
+.card .min{font-size:.85rem;color:var(--muted);margin:0}
+.badge{align-self:flex-start;font-size:.8rem;font-weight:600;border-radius:999px;padding:.05rem .7rem;background:var(--ok-bg);color:var(--ok)}
+.badge.legacy{background:var(--legacy-bg);color:var(--legacy)}
+.acts{margin-top:auto;padding-top:.6rem;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;border-top:1px solid var(--line)}
+.btn{border:1.5px solid var(--navy);background:var(--navy);color:#fff;border-radius:8px;padding:.45rem .9rem;min-height:42px}
+.btn:hover{background:var(--navy-deep)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--navy)}
+.btn.on{background:var(--gold);border-color:var(--gold);color:#111}
+.cmp{margin-left:auto;display:flex;align-items:center;gap:.4rem;font-size:.92rem}
+.cmp input{width:20px;height:20px;accent-color:var(--navy)}
+.empty{grid-column:1/-1;background:var(--surface);border:1px dashed var(--line);border-radius:10px;padding:2rem;text-align:center}
+.more-wrap{display:flex;justify-content:center;margin-top:1.2rem}
+.more-wrap .btn{min-width:190px}
+
+/* ---------- how it works ---------- */
+.how{background:var(--surface);border-block:1px solid var(--line);padding:2.8rem 0}
+.how h2{font-size:1.7rem;margin-bottom:1.2rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;counter-reset:s;padding:0;margin:0;list-style:none}
+.steps li{counter-increment:s;padding-left:3rem;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--gold);color:#111;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;display:grid;place-items:center}
+.steps b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+
+/* ---------- footer ---------- */
+footer{background:var(--navy-deep);color:#cdd8ee;padding:2.5rem 0 calc(2rem + env(safe-area-inset-bottom,0px))}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:2rem}
+footer h2{color:#fff;font-size:1.2rem;margin-bottom:.5rem}
+footer p{margin:.4rem 0;font-size:.95rem}
+.partner{display:flex;gap:1rem;align-items:center}
+.partner img{width:84px;height:84px;border-radius:8px;background:#fff;padding:3px;flex:none}
+@media (max-width:760px){footer .wrap{grid-template-columns:1fr}}
+
+/* ---------- compare tray ---------- */
+.tray{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--navy-deep);color:#fff;border-top:2px solid var(--gold);padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom,0px));display:none}
+.tray.show{display:block}
+.tray .wrap{display:flex;gap:.8rem;align-items:center;flex-wrap:wrap}
+.tray .btn{background:var(--gold);border-color:var(--gold);color:#111}
+.tray .btn.ghost{background:transparent;color:#fff;border-color:#5b6f96}
+
+/* ---------- dialogs ---------- */
+dialog{border:0;border-radius:12px;padding:0;width:min(760px,calc(100% - 1.5rem));max-height:calc(100% - 2rem);background:var(--surface);color:var(--ink)}
+dialog::backdrop{background:rgba(6,16,36,.65)}
+.dh{position:sticky;top:0;background:var(--navy);color:#fff;padding:1rem 1.2rem;display:flex;gap:1rem;align-items:flex-start;border-bottom:3px solid var(--gold)}
+.dh h2{font-size:1.4rem;flex:1}
+.dh button{background:none;border:1px solid #5b6f96;color:#fff;border-radius:8px;padding:.3rem .7rem}
+.db{padding:1.1rem 1.2rem 1.4rem}
+.db dl{margin:0;display:grid;grid-template-columns:150px 1fr;gap:.7rem 1rem}
+.db dt{font-weight:600;color:var(--muted)}
+.db dd{margin:0}
+.db ul{margin:.2rem 0 0;padding-left:1.2rem}
+@media (max-width:560px){.db dl{grid-template-columns:1fr;gap:.1rem}.db dt{margin-top:.7rem}}
+.note{margin-top:1.2rem;padding:.8rem 1rem;background:var(--chip);border-radius:8px;font-size:.92rem}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px}
+th,td{border:1px solid var(--line);padding:.6rem .7rem;text-align:left;vertical-align:top;font-size:.95rem}
+th{background:var(--chip);width:130px}
+
+/* ---------- toast ---------- */
+.toast{position:fixed;left:50%;bottom:5rem;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:.6rem 1rem;border-radius:8px;z-index:40;display:none}
+.toast.show{display:block}

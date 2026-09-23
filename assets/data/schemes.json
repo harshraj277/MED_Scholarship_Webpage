@@ -1,0 +1,570 @@
+[
+  {
+    "id": "AB-PMJAY",
+    "name": "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana",
+    "short_name": "PM-JAY",
+    "category": "Health Insurance / Financial Protection",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "National Health Authority",
+    "launch_year": 2018,
+    "scheme_type": "Health insurance (cashless)",
+    "status": "active",
+    "description": "A public health assurance scheme that pays for hospital care at empanelled public and private hospitals, without the patient paying at the counter.",
+    "coverage_amount": "Up to ₹5 lakh per family per year for secondary and tertiary hospitalisation.",
+    "eligibility": "Families identified using SECC 2011 deprivation and occupational criteria. Citizens aged 70 and above are also covered, regardless of income.",
+    "target_beneficiaries": "Economically vulnerable families and senior citizens aged 70+.",
+    "official_website": "https://pmjay.gov.in",
+    "key_features": [
+      "Cashless, paperless treatment at empanelled hospitals",
+      "Usable in any state (portable across India)",
+      "No cap on family size or age",
+      "Pre-existing conditions covered from day one",
+      "Covers a wide package list of procedures across specialities"
+    ],
+    "audience": [
+      "family",
+      "senior"
+    ]
+  },
+  {
+    "id": "RAN",
+    "name": "Rashtriya Arogya Nidhi",
+    "short_name": "RAN",
+    "category": "Health Insurance / Financial Protection",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "Ministry of Health and Family Welfare",
+    "launch_year": 1997,
+    "scheme_type": "Financial assistance",
+    "status": "active",
+    "description": "One-time financial help for patients living below the poverty line who need treatment for a life-threatening disease at a government hospital.",
+    "coverage_amount": "Assistance per case, as sanctioned by the scheme's committee. Check the official site for current limits.",
+    "eligibility": "Patients below the poverty line with a life-threatening illness, treated at a government hospital.",
+    "target_beneficiaries": "BPL patients with major illnesses such as cancer, heart and kidney disease.",
+    "official_website": "https://mohfw.gov.in",
+    "key_features": [
+      "Grant goes to the treating government hospital",
+      "For serious, high-cost treatment",
+      "Application through the hospital"
+    ],
+    "audience": [
+      "patient",
+      "family"
+    ]
+  },
+  {
+    "id": "RSBY",
+    "name": "Rashtriya Swasthya Bima Yojana",
+    "short_name": "RSBY",
+    "category": "Health Insurance / Financial Protection",
+    "ministry": "Ministry of Labour and Employment",
+    "implementing_body": "Ministry of Labour and Employment",
+    "launch_year": 2008,
+    "scheme_type": "Health insurance (legacy)",
+    "status": "inactive/subsumed",
+    "description": "Earlier smart-card based health insurance for BPL families. Its work has been taken over by Ayushman Bharat PM-JAY.",
+    "coverage_amount": "Historically ₹30,000 per family per year. No longer enrolling.",
+    "eligibility": "Was open to BPL families. Not accepting new enrolment.",
+    "target_beneficiaries": "Formerly BPL families and unorganised-sector workers.",
+    "official_website": "https://pmjay.gov.in",
+    "key_features": [
+      "Biometric smart card",
+      "Subsumed into PM-JAY",
+      "Listed here for reference only"
+    ],
+    "audience": [
+      "family"
+    ]
+  },
+  {
+    "id": "AB-HWC",
+    "name": "Ayushman Bharat Health & Wellness Centres (Ayushman Arogya Mandir)",
+    "short_name": "AB-HWC",
+    "category": "Health Infrastructure",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "National Health Mission",
+    "launch_year": 2018,
+    "scheme_type": "Primary health care",
+    "status": "active",
+    "description": "Upgraded sub-centres and primary health centres that offer a wider range of primary care close to home, including screening and follow-up for common long-term conditions.",
+    "coverage_amount": "Free primary care services at the centre.",
+    "eligibility": "Open to everyone in the catchment area.",
+    "target_beneficiaries": "All citizens, especially rural and semi-urban populations.",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Screening for diabetes, hypertension and common cancers",
+      "Maternal and child health services",
+      "Free essential medicines and diagnostics",
+      "Wellness and yoga sessions"
+    ],
+    "audience": [
+      "family"
+    ]
+  },
+  {
+    "id": "PM-ABHIM",
+    "name": "Pradhan Mantri Ayushman Bharat Health Infrastructure Mission",
+    "short_name": "PM-ABHIM",
+    "category": "Health Infrastructure",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "Ministry of Health and Family Welfare",
+    "launch_year": 2021,
+    "scheme_type": "Infrastructure funding",
+    "status": "active",
+    "description": "A large investment programme to build up health systems: primary care, critical care blocks, laboratories and disease surveillance.",
+    "coverage_amount": "Multi-year central and state outlay for infrastructure, not payments to individuals.",
+    "eligibility": "Not applied for by individuals. Benefits reach people through improved facilities.",
+    "target_beneficiaries": "All citizens, through stronger public health facilities.",
+    "official_website": "https://pmabhim.mohfw.gov.in",
+    "key_features": [
+      "Critical care blocks in districts",
+      "Public health labs",
+      "Integrated health information portal",
+      "Support for urban and rural health centres"
+    ],
+    "audience": []
+  },
+  {
+    "id": "NHM",
+    "name": "National Health Mission",
+    "short_name": "NHM",
+    "category": "Health Infrastructure",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "Ministry of Health and Family Welfare",
+    "launch_year": 2013,
+    "scheme_type": "Umbrella health mission",
+    "status": "active",
+    "description": "The main central programme supporting states to run public health services, made up of the rural (NRHM) and urban (NUHM) missions.",
+    "coverage_amount": "Free services at public health facilities.",
+    "eligibility": "Open to everyone using public health facilities.",
+    "target_beneficiaries": "All citizens, with focus on women, children and underserved areas.",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Funds ASHA workers and health facilities",
+      "Supports maternal, newborn and child health",
+      "Free drugs and diagnostics at public facilities",
+      "Strengthens district hospitals"
+    ],
+    "audience": [
+      "mother",
+      "child"
+    ]
+  },
+  {
+    "id": "PMSSY",
+    "name": "Pradhan Mantri Swasthya Suraksha Yojana",
+    "short_name": "PMSSY",
+    "category": "Health Infrastructure",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "Ministry of Health and Family Welfare",
+    "launch_year": 2003,
+    "scheme_type": "Tertiary care infrastructure",
+    "status": "active",
+    "description": "Sets up new AIIMS-like institutes and upgrades government medical colleges so that advanced care and medical education are available in more regions.",
+    "coverage_amount": "Institutional funding, not individual payments.",
+    "eligibility": "Open to patients at the participating institutions.",
+    "target_beneficiaries": "Patients needing tertiary care; medical students and staff.",
+    "official_website": "https://pmssy-mohfw.nic.in",
+    "key_features": [
+      "New AIIMS institutes",
+      "Upgraded government medical colleges",
+      "Expands tertiary care access"
+    ],
+    "audience": []
+  },
+  {
+    "id": "CGHS",
+    "name": "Central Government Health Scheme",
+    "short_name": "CGHS",
+    "category": "Employee / Pensioner Schemes",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "Directorate General of CGHS",
+    "launch_year": 1954,
+    "scheme_type": "Comprehensive health cover",
+    "status": "active",
+    "description": "Health care for serving and retired central government employees and their eligible dependants, through wellness centres and empanelled hospitals.",
+    "coverage_amount": "Cashless treatment as per CGHS rates. Contribution depends on pay level.",
+    "eligibility": "Central government employees, pensioners, and certain other groups covered under the scheme, along with eligible family members.",
+    "target_beneficiaries": "Central government employees, pensioners and dependants.",
+    "official_website": "https://cghs.mohfw.gov.in",
+    "key_features": [
+      "OPD consultations at wellness centres",
+      "Medicines and diagnostics",
+      "Cashless hospital treatment at empanelled hospitals",
+      "Available in listed cities only"
+    ],
+    "audience": [
+      "worker",
+      "senior"
+    ]
+  },
+  {
+    "id": "ESIC",
+    "name": "Employees' State Insurance Scheme",
+    "short_name": "ESIC",
+    "category": "Employee / Pensioner Schemes",
+    "ministry": "Ministry of Labour and Employment",
+    "implementing_body": "Employees' State Insurance Corporation",
+    "launch_year": 1952,
+    "scheme_type": "Social security insurance",
+    "status": "active",
+    "description": "A self-financed social security scheme giving medical care and cash benefits to workers in covered establishments.",
+    "coverage_amount": "Full medical care plus cash benefits for sickness, maternity, disablement and dependants.",
+    "eligibility": "Employees earning up to ₹21,000 a month (₹25,000 for persons with disabilities) in covered establishments.",
+    "target_beneficiaries": "Workers in factories and establishments covered by the ESI Act, and their families.",
+    "official_website": "https://esic.gov.in",
+    "key_features": [
+      "Contributions from employee (0.75%) and employer (3.25%) of wages",
+      "Free medical care for insured person and family",
+      "Sickness and maternity cash benefits",
+      "Dependants' benefit and disablement benefit"
+    ],
+    "audience": [
+      "worker"
+    ]
+  },
+  {
+    "id": "JSY",
+    "name": "Janani Suraksha Yojana",
+    "short_name": "JSY",
+    "category": "Maternal & Child Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "National Health Mission",
+    "launch_year": 2005,
+    "scheme_type": "Cash incentive",
+    "status": "active",
+    "description": "A cash incentive to encourage women to deliver in a government or accredited health facility rather than at home.",
+    "coverage_amount": "Rural ₹1,400 and urban ₹1,000 in low performing states. ₹700 rural and ₹600 urban in high performing states.",
+    "eligibility": "Pregnant women delivering in a government or accredited private facility; conditions differ between states.",
+    "target_beneficiaries": "Pregnant women, with special focus on poor families.",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Cash paid to the mother",
+      "Linked to institutional delivery",
+      "ASHA worker helps with registration and transport"
+    ],
+    "audience": [
+      "mother"
+    ]
+  },
+  {
+    "id": "JSSK",
+    "name": "Janani Shishu Suraksha Karyakram",
+    "short_name": "JSSK",
+    "category": "Maternal & Child Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "National Health Mission",
+    "launch_year": 2011,
+    "scheme_type": "Free entitlements",
+    "status": "active",
+    "description": "Free and cashless services for pregnant women and sick newborns at government health facilities.",
+    "coverage_amount": "No out-of-pocket cost for delivery and newborn care in public facilities.",
+    "eligibility": "All pregnant women delivering at public health facilities, and sick infants up to one year.",
+    "target_beneficiaries": "Pregnant women and sick newborns.",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Free normal delivery and caesarean section",
+      "Free drugs, diagnostics and blood",
+      "Free diet during the hospital stay",
+      "Free transport from home and back"
+    ],
+    "audience": [
+      "mother",
+      "child"
+    ]
+  },
+  {
+    "id": "RBSK",
+    "name": "Rashtriya Bal Swasthya Karyakram",
+    "short_name": "RBSK",
+    "category": "Maternal & Child Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "National Health Mission",
+    "launch_year": 2013,
+    "scheme_type": "Screening and early intervention",
+    "status": "active",
+    "description": "Children are screened for common health problems at birth, at Anganwadi centres and in schools, and referred for free treatment.",
+    "coverage_amount": "Free screening and treatment referral.",
+    "eligibility": "Children from birth to 18 years.",
+    "target_beneficiaries": "Newborns and children aged 0 to 18.",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Looks for defects at birth, deficiencies, diseases and developmental delays",
+      "Screening at Anganwadis and government schools",
+      "District early intervention centres",
+      "Free follow-up treatment"
+    ],
+    "audience": [
+      "child"
+    ]
+  },
+  {
+    "id": "PMSMA",
+    "name": "Pradhan Mantri Surakshit Matritva Abhiyan",
+    "short_name": "PMSMA",
+    "category": "Maternal & Child Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "National Health Mission",
+    "launch_year": 2016,
+    "scheme_type": "Antenatal care",
+    "status": "active",
+    "description": "Every pregnant woman can get a free check-up by a doctor on the 9th of each month at public health facilities.",
+    "coverage_amount": "Free antenatal check-ups.",
+    "eligibility": "Pregnant women in their second or third trimester, at public facilities.",
+    "target_beneficiaries": "Pregnant women.",
+    "official_website": "https://pmsma.mohfw.gov.in",
+    "key_features": [
+      "Held on the 9th of every month",
+      "Specialist doctors examine women",
+      "High risk pregnancies are identified and tracked"
+    ],
+    "audience": [
+      "mother"
+    ]
+  },
+  {
+    "id": "MI",
+    "name": "Mission Indradhanush / Intensified Mission Indradhanush",
+    "short_name": "IMI",
+    "category": "Immunization",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "Ministry of Health and Family Welfare",
+    "launch_year": 2014,
+    "scheme_type": "Immunisation drive",
+    "status": "active",
+    "description": "Special campaigns to reach children and pregnant women who missed routine vaccination.",
+    "coverage_amount": "Free vaccines.",
+    "eligibility": "Children up to 2 years and pregnant women who are not fully vaccinated.",
+    "target_beneficiaries": "Unvaccinated and partially vaccinated children and pregnant women.",
+    "official_website": "https://mohfw.gov.in",
+    "key_features": [
+      "Focus on low coverage districts and hard to reach areas",
+      "Extra vaccination rounds",
+      "Uses the U-WIN portal for tracking"
+    ],
+    "audience": [
+      "child",
+      "mother"
+    ]
+  },
+  {
+    "id": "UIP",
+    "name": "Universal Immunization Programme",
+    "short_name": "UIP",
+    "category": "Immunization",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "Ministry of Health and Family Welfare",
+    "launch_year": 1985,
+    "scheme_type": "Routine immunisation",
+    "status": "active",
+    "description": "Free routine vaccination for children and pregnant women against several vaccine-preventable diseases.",
+    "coverage_amount": "Free vaccines at government health facilities.",
+    "eligibility": "All infants and children up to the schedule ages, and pregnant women.",
+    "target_beneficiaries": "Infants, children and pregnant women.",
+    "official_website": "https://mohfw.gov.in",
+    "key_features": [
+      "Vaccination against a dozen diseases",
+      "Given at sub-centres, health centres and outreach sessions",
+      "Vaccination card for tracking"
+    ],
+    "audience": [
+      "child",
+      "mother"
+    ]
+  },
+  {
+    "id": "NTEP",
+    "name": "National TB Elimination Programme",
+    "short_name": "NTEP",
+    "category": "Disease Control",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "Central TB Division",
+    "launch_year": 2020,
+    "scheme_type": "Disease control",
+    "status": "active",
+    "description": "Free diagnosis and treatment for tuberculosis, with financial support for nutrition during treatment.",
+    "coverage_amount": "Free tests and drugs. Nutrition support of ₹1,000 per month during treatment (Ni-kshay Poshan Yojana).",
+    "eligibility": "Any person diagnosed with TB.",
+    "target_beneficiaries": "All TB patients.",
+    "official_website": "https://tbcindia.mohfw.gov.in",
+    "key_features": [
+      "Free diagnosis and complete drug course",
+      "Notification through Ni-kshay portal",
+      "Direct benefit transfer for nutrition",
+      "Support from a community volunteer (Ni-kshay Mitra)"
+    ],
+    "audience": [
+      "patient"
+    ]
+  },
+  {
+    "id": "NACP",
+    "name": "National AIDS Control Programme",
+    "short_name": "NACP",
+    "category": "Disease Control",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "National AIDS Control Organisation",
+    "launch_year": 1992,
+    "scheme_type": "Disease control",
+    "status": "active",
+    "description": "Prevention, testing and free treatment for HIV and AIDS.",
+    "coverage_amount": "Free testing, counselling and antiretroviral therapy.",
+    "eligibility": "Open to all who need HIV testing, counselling or treatment.",
+    "target_beneficiaries": "People at risk of, or living with, HIV.",
+    "official_website": "https://naco.gov.in",
+    "key_features": [
+      "Free HIV testing and counselling",
+      "Free ART at ART centres",
+      "Prevention of mother-to-child transmission",
+      "Confidential services"
+    ],
+    "audience": [
+      "patient"
+    ]
+  },
+  {
+    "id": "PMNDP",
+    "name": "Pradhan Mantri National Dialysis Programme",
+    "short_name": "PMNDP",
+    "category": "Disease Control",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "National Health Mission",
+    "launch_year": 2016,
+    "scheme_type": "Free dialysis",
+    "status": "active",
+    "description": "Free dialysis services for poor patients with kidney failure at district hospitals.",
+    "coverage_amount": "Free dialysis sessions for eligible patients.",
+    "eligibility": "Patients below the poverty line, as defined by the state, needing dialysis.",
+    "target_beneficiaries": "Kidney patients from low-income families.",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Dialysis available at district hospitals",
+      "Reduces travel to big cities",
+      "Run under NHM"
+    ],
+    "audience": [
+      "patient",
+      "family"
+    ]
+  },
+  {
+    "id": "PMBJP",
+    "name": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana",
+    "short_name": "PMBJP",
+    "category": "Medicine Access",
+    "ministry": "Ministry of Chemicals and Fertilizers",
+    "implementing_body": "Bureau of Pharma PSUs of India",
+    "launch_year": 2008,
+    "scheme_type": "Affordable medicines",
+    "status": "active",
+    "description": "Quality generic medicines are sold at Janaushadhi Kendras at prices far below branded equivalents.",
+    "coverage_amount": "Medicines priced much lower than branded ones.",
+    "eligibility": "Open to everyone.",
+    "target_beneficiaries": "All citizens, especially those spending a lot on medicines.",
+    "official_website": "https://janaushadhi.gov.in",
+    "key_features": [
+      "Thousands of Kendras across the country",
+      "WHO-GMP certified suppliers",
+      "Generic medicines and surgical items"
+    ],
+    "audience": [
+      "family",
+      "senior",
+      "patient"
+    ]
+  },
+  {
+    "id": "ABDM",
+    "name": "Ayushman Bharat Digital Mission",
+    "short_name": "ABDM",
+    "category": "Digital Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "National Health Authority",
+    "launch_year": 2021,
+    "scheme_type": "Digital health",
+    "status": "active",
+    "description": "A digital health system that lets people create an ABHA number and keep their health records in one place.",
+    "coverage_amount": "Free ABHA number and health records.",
+    "eligibility": "Any Indian resident can create an ABHA.",
+    "target_beneficiaries": "All citizens.",
+    "official_website": "https://abdm.gov.in",
+    "key_features": [
+      "14-digit ABHA number",
+      "Link records from different hospitals",
+      "Share records only with your consent",
+      "Works with the ABHA app"
+    ],
+    "audience": []
+  },
+  {
+    "id": "NMHP",
+    "name": "National Mental Health Programme",
+    "short_name": "NMHP",
+    "category": "Mental Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "Ministry of Health and Family Welfare",
+    "launch_year": 1982,
+    "scheme_type": "Mental health services",
+    "status": "active",
+    "description": "Mental health care through district programmes and the Tele MANAS helpline.",
+    "coverage_amount": "Free counselling helpline and services at public facilities.",
+    "eligibility": "Open to anyone needing mental health support.",
+    "target_beneficiaries": "All citizens.",
+    "official_website": "https://telemanas.mohfw.gov.in",
+    "key_features": [
+      "Tele MANAS helpline: 14416 or 1800-89-14416",
+      "District Mental Health Programme",
+      "Services at public hospitals"
+    ],
+    "audience": [
+      "patient"
+    ]
+  },
+  {
+    "id": "POSHAN",
+    "name": "Poshan Abhiyaan (Saksham Anganwadi and Poshan 2.0)",
+    "short_name": "POSHAN",
+    "category": "Nutrition",
+    "ministry": "Ministry of Women and Child Development",
+    "implementing_body": "Ministry of Women and Child Development",
+    "launch_year": 2018,
+    "scheme_type": "Nutrition mission",
+    "status": "active",
+    "description": "A mission to improve nutrition among young children, adolescent girls, pregnant women and mothers who are breastfeeding.",
+    "coverage_amount": "Supplementary nutrition through Anganwadi centres.",
+    "eligibility": "Children under 6, pregnant and lactating women, and adolescent girls, through Anganwadis.",
+    "target_beneficiaries": "Young children, adolescent girls, pregnant and lactating women.",
+    "official_website": "https://poshanabhiyaan.gov.in",
+    "key_features": [
+      "Nutrition services at Anganwadi centres",
+      "Growth monitoring",
+      "Community awareness (Poshan Maah)",
+      "Tracked through Poshan Tracker"
+    ],
+    "audience": [
+      "mother",
+      "child"
+    ]
+  },
+  {
+    "id": "NAM",
+    "name": "National AYUSH Mission",
+    "short_name": "NAM",
+    "category": "AYUSH",
+    "ministry": "Ministry of AYUSH",
+    "implementing_body": "Ministry of AYUSH",
+    "launch_year": 2014,
+    "scheme_type": "AYUSH services",
+    "status": "active",
+    "description": "Supports states to offer Ayurveda, Yoga, Unani, Siddha and Homoeopathy services and to improve related education and medicines.",
+    "coverage_amount": "Support for facilities and services rather than individual payments.",
+    "eligibility": "Open to everyone using AYUSH facilities.",
+    "target_beneficiaries": "All citizens.",
+    "official_website": "https://nam.gov.in",
+    "key_features": [
+      "AYUSH wings in public hospitals",
+      "Support for AYUSH colleges",
+      "Quality control of AYUSH drugs"
+    ],
+    "audience": []
+  }
+]

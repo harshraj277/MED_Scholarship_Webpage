@@ -1,0 +1,48 @@
+/* ============================================================
+   Yojana Setu – base.css
+   Reset, design tokens (light theme by default), typography,
+   and global utilities. Component styles live in components.css;
+   colour overrides for dark mode live in themes.css (loaded last).
+   ============================================================ */
+
+:root{
+  /* Light theme tokens */
+  --navy:#0e2a55; --navy-deep:#081c3d; --gold:#c79b2b; --gold-soft:#f0dc9c;
+  --bg:#f4f6fa; --surface:#ffffff; --ink:#14213d; --muted:#4d5b75; --line:#d9e0ec;
+  --ok:#17694f; --ok-bg:#dff2ea; --legacy:#6b5a2a; --legacy-bg:#f3ead0;
+  --focus:#1a5fd0; --chip:#e8edf6;
+
+  /* Text-size scale; set at runtime by the A+ button (app.js). */
+  --fs:1rem;
+
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Hind",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:calc(1.0625rem*var(--fs));
+  line-height:1.6;
+}
+
+h1,h2,h3{font-family:"Bricolage Grotesque","Hind",system-ui,sans-serif;line-height:1.15;margin:0;letter-spacing:-.01em}
+a{color:inherit}
+
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+
+/* Layout + a11y helpers */
+.wrap{width:min(1180px,100% - 2rem);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:0;background:var(--gold);color:#111;padding:.6rem 1rem;z-index:100}
+.skip:focus{left:0}
+
+button{font:inherit;color:inherit;cursor:pointer}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

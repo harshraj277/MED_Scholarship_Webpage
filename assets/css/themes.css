@@ -1,0 +1,34 @@
+/* ============================================================
+   Yojana Setu – themes.css
+   Dark theme. Loaded LAST so these overrides win over the same
+   selectors in components.css. Dark mode can be triggered by the
+   system preference (unless the user pinned light via the Theme
+   button) or forced via <html data-theme="dark">.
+   ============================================================ */
+
+/* System preference -> dark, unless the user pinned "light" */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0a1730; --surface:#11223f; --ink:#e9eef8; --muted:#a9b6cc; --line:#27395c;
+    --ok:#7fd8b5; --ok-bg:#12382d; --legacy:#e6d08f; --legacy-bg:#3a3117; --focus:#8fb8ff; --chip:#1b2f52;
+  }
+}
+
+/* Explicit dark mode (Theme button / saved preference) */
+:root[data-theme="dark"]{
+  --bg:#0a1730; --surface:#11223f; --ink:#e9eef8; --muted:#a9b6cc; --line:#27395c;
+  --ok:#7fd8b5; --ok-bg:#12382d; --legacy:#e6d08f; --legacy-bg:#3a3117; --focus:#8fb8ff; --chip:#1b2f52;
+}
+
+/* Component-level dark overrides (gold replaces navy accents) */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .chip[aria-pressed="true"]{background:var(--gold);color:#111;border-color:var(--gold)}
+  :root:not([data-theme="light"]) .btn{background:var(--gold);color:#111;border-color:var(--gold)}
+  :root:not([data-theme="light"]) .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  :root:not([data-theme="light"]) .card .short{background:var(--gold);color:#111}
+}
+
+:root[data-theme="dark"] .chip[aria-pressed="true"]{background:var(--gold);color:#111;border-color:var(--gold)}
+:root[data-theme="dark"] .btn{background:var(--gold);color:#111;border-color:var(--gold)}
+:root[data-theme="dark"] .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+:root[data-theme="dark"] .card .short{background:var(--gold);color:#111}

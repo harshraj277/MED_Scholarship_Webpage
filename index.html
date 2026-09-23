@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yojana Setu – Government health schemes, explained</title>
+<meta name="description" content="Find central government health and medical schemes you or your family can use. Yojana Setu explains who can apply, what is covered and where to go.">
+<link rel="icon" href="assets/img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/themes.css">
+</head>
+<body>
+<a class="skip" href="#finder">Skip to schemes</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Yojana Setu home">
+      <img src="assets/img/logo.webp" alt="" width="44" height="44">
+      <span><b>Yojana Setu</b><small>योजना सेतु</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-s" href="#finder">Find a scheme</a>
+      <a class="hide-s" href="#how">How it works</a>
+      <button id="btnSaved" type="button" aria-pressed="false">Saved<span class="count" id="savedCount">0</span></button>
+      <button id="btnText" type="button" aria-label="Increase text size">A+</button>
+      <button id="btnTheme" type="button" aria-label="Switch between light and dark theme">Theme</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>The bridge between you and government health schemes</h1>
+      <p class="hi">सरकारी स्वास्थ्य योजनाओं तक पहुँचने का सेतु</p>
+      <p class="lead">See which central government health schemes fit your situation, what they pay for, and where to apply. No jargon, no sign-up.</p>
+    </div>
+    <div class="mark"><img src="assets/img/logo.webp" alt="Yojana Setu emblem" width="300" height="300"></div>
+  </div>
+</section>
+
+<section class="who" aria-labelledby="whoH">
+  <div class="wrap">
+    <div class="panel">
+      <h2 id="whoH">Who needs the help?</h2>
+      <div class="chips" id="audChips" role="group" aria-label="Filter by who the scheme is for"></div>
+    </div>
+  </div>
+</section>
+
+<section class="finder" id="finder">
+  <div class="wrap">
+    <div class="bar">
+      <div class="s"><label class="f" for="q">Search by name or topic</label><input id="q" type="search" placeholder="Try “dialysis”, “delivery” or “PM-JAY”"></div>
+      <div><label class="f" for="cat">Type of help</label><select id="cat"></select></div>
+      <div><label class="f" for="stat">Status</label><select id="stat"><option value="">All</option><option value="active">Active</option><option value="legacy">Legacy</option></select></div>
+      <div><label class="f" for="sort">Sort by</label><select id="sort"><option value="cat">Type of help</option><option value="az">Name A–Z</option><option value="new">Newest first</option><option value="old">Oldest first</option></select></div>
+    </div>
+    <div class="meta">
+      <h2 id="resH" aria-live="polite"></h2>
+      <button class="clear" id="clear" type="button">Clear all filters</button>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="more-wrap" id="moreWrap">
+      <button class="btn" id="moreBtn" type="button">See more schemes</button>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <h2>Three steps to a scheme</h2>
+    <ol class="steps">
+      <li><b>Pick who it is for</b>Choose a person or a situation above, or search by name.</li>
+      <li><b>Read who qualifies</b>Open a scheme to see what it covers, who can use it and its key features.</li>
+      <li><b>Apply on the official site</b>Every scheme links to its government website. Confirm details there before you apply.</li>
+    </ol>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h2>Yojana Setu</h2>
+      <p><strong>Information only.</strong> This is not an official government portal. Amounts and eligibility change, so confirm on the scheme's official website before you apply.</p>
+      <p>Covers central government health schemes. State schemes are not included yet. Data compiled on 10 September 2026.</p>
+    </div>
+    <div class="partner">
+      <img src="assets/img/institution.webp" alt="Modern Education Society's College of Engineering, Pune" width="84" height="84">
+      <div><h2>Our institution</h2><p>Modern Education Society's College of Engineering, Pune</p></div>
+    </div>
+  </div>
+</footer>
+
+<div class="tray" id="tray" role="region" aria-label="Compare schemes">
+  <div class="wrap"><span id="trayTxt"></span><button class="btn" id="goCmp" type="button">Compare</button><button class="btn ghost" id="clrCmp" type="button">Clear</button></div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<dialog id="dlg" aria-labelledby="dTitle">
+  <div class="dh"><h2 id="dTitle"></h2><button type="button" id="dClose">Close</button></div>
+  <div class="db" id="dBody"></div>
+</dialog>
+<dialog id="cdlg" aria-labelledby="cTitle">
+  <div class="dh"><h2 id="cTitle">Compare schemes</h2><button type="button" id="cClose">Close</button></div>
+  <div class="db"><div class="tw" id="cBody"></div></div>
+</dialog>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
