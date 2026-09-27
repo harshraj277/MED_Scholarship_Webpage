@@ -61,12 +61,25 @@
 <section class="finder" id="finder">
   <div class="wrap">
     <div class="bar">
-      <div class="s"><label class="f" for="q">Search by name or topic</label><div class="input-wrap"><input id="q" type="search" placeholder="Try “dialysis”, “delivery” or “PM-JAY”"><button id="qClear" class="q-clear" type="button" aria-label="Clear search">×</button></div></div>
-      <div><label class="f" for="cat">Type of help</label><select id="cat"></select></div>
-      <div><label class="f" for="age">Age group</label><select id="age"></select></div>
-      <div><label class="f" for="income">Max monthly income (₹)</label><div class="input-wrap inc-wrap"><input id="income" type="number" min="0" step="500" inputmode="numeric" placeholder="e.g. 10000"><button id="incClear" class="q-clear" type="button" aria-label="Clear income">×</button></div></div>
-      <div><label class="f" id="statLbl">Status</label><div class="seg" id="statSeg" role="group" aria-labelledby="statLbl"><button class="seg-btn" type="button" data-stat="" aria-pressed="true">All</button><button class="seg-btn" type="button" data-stat="active">Active</button><button class="seg-btn" type="button" data-stat="legacy">Legacy</button></div></div>
-      <div><label class="f" for="sort">Sort by</label><select id="sort"><option value="cat">Type of help</option><option value="az">Name A–Z</option><option value="new">Newest first</option><option value="old">Oldest first</option></select></div>
+      <div class="s">
+        <label class="f" for="q">Search by name or topic</label>
+        <div class="s-row">
+          <div class="input-wrap"><input id="q" type="search" placeholder="Try “dialysis”, “delivery” or “PM-JAY”"><button id="qClear" class="q-clear" type="button" aria-label="Clear search">×</button></div>
+          <button id="filtersBtn" class="btn filters-btn" type="button" aria-expanded="false" aria-controls="filtersPanel">Filters<span class="caret" aria-hidden="true">▾</span><span class="count" id="filtersCount" hidden>0</span></button>
+        </div>
+      </div>
+      <div class="filters collapsed" id="filtersPanel">
+        <div class="filters-inner">
+          <div><label class="f" for="cat">Type of help</label><select id="cat"></select></div>
+          <div><label class="f" for="age">Age group</label><select id="age"></select></div>
+          <div><label class="f" id="genderLbl">Gender</label><div class="seg" id="genderSeg" role="group" aria-labelledby="genderLbl" data-seg-key="gender"><button class="seg-btn" type="button" data-val="" aria-pressed="true">All</button><button class="seg-btn" type="button" data-val="female">Women</button><button class="seg-btn" type="button" data-val="male">Men</button></div></div>
+          <div><label class="f" for="income">Max monthly income (₹)</label><div class="input-wrap inc-wrap"><input id="income" type="number" min="0" step="500" inputmode="numeric" placeholder="e.g. 10000"><button id="incClear" class="q-clear" type="button" aria-label="Clear income">×</button></div></div>
+          <div><label class="f" for="min">Ministry</label><select id="min"></select></div>
+          <div><label class="f" for="type">Scheme type</label><select id="type"></select></div>
+          <div><label class="f" id="statLbl">Status</label><div class="seg" id="statSeg" role="group" aria-labelledby="statLbl" data-seg-key="stat"><button class="seg-btn" type="button" data-val="" aria-pressed="true">All</button><button class="seg-btn" type="button" data-val="active">Active</button><button class="seg-btn" type="button" data-val="legacy">Legacy</button></div></div>
+          <div><label class="f" for="sort">Sort by</label><select id="sort"><option value="cat">Type of help</option><option value="az">Name A–Z</option><option value="new">Newest first</option><option value="old">Oldest first</option></select></div>
+        </div>
+      </div>
     </div>
     <div class="meta">
       <h2 id="resH" aria-live="polite"></h2>

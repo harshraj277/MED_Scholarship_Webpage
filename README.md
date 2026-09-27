@@ -15,9 +15,18 @@ College of Engineering, Pune**.
 - **Filter by audience** — low-income family, mother-to-be, child, employee/pensioner,
   senior citizen, patient with a long-term illness
 - **Filter by age group** — children (0–17), adults (18–59), seniors (60+), seniors 70+
+- **Filter by gender** — show only the schemes a woman or a man can actually use
+  (JSY and PMSMA are women-only; every other scheme is open to all)
 - **Filter by income** — type your monthly household income (₹); schemes with
   income limits are shortlisted automatically (e.g. PM-JAY ≤ ₹10,000/month,
   RAN / PMNDP ≤ ~₹8,300/month, ESIC wages ≤ ₹21,000/month)
+- **Filter by ministry and scheme type** — narrow by the parent ministry
+  (MoHFW, MoLAB, …) or the kind of help (health insurance, cash incentive, …)
+- **Collapsible filter panel** — all filter controls live behind a **Filters**
+  toggle that expands and contracts, so the finder stays compact and search
+  always stays visible. It starts collapsed, remembers whether you left it open
+  (in `localStorage`), shows a live count of active filters, and makes the
+  collapsed controls `inert` so keyboard focus skips them
 - **Filter and sort** — by type of help, segmented status control (All / Active /
   Legacy), and sort order
 - **Scheme details** — each card opens a dialog with coverage, eligibility, features,
@@ -108,6 +117,7 @@ Open `assets/data/schemes.json` and add or edit an object:
   "key_features": ["Feature 1", "Feature 2"],
   "audience": ["family"],
   "age_group": ["all"],
+  "gender": ["all"],
   "income_max_annual": 120000
 }
 ```
@@ -118,13 +128,18 @@ Valid `age_group` values: `all` (no age restriction), `child` (0–17), `adult`
 (18–59), `senior` (60+), `senior70` (70+). Use `"all"` when the scheme serves
 every age.
 
+Valid `gender` values: `all` (open to everyone), `female`, `male`. Use
+`["all"]` unless the scheme is restricted to one gender — currently only JSY
+and PMSMA are `["female"]`. A record with no `gender` key is treated as `["all"]`.
+
 `income_max_annual` is the maximum household income per year in rupees, used by
 the income filter (the app compares `monthly input × 12` against it). Use
 `null` when the scheme has no income test (universal schemes match every income).
 
-A scheme matches the age filter when its list contains `"all"` **or** the
-selected value. Universal schemes therefore appear under every age group.
-A non-`active` status is shown as **Legacy · no longer enrolling**.
+A scheme matches the age and gender filters when its list contains `"all"`
+**or** the selected value. Universal schemes therefore appear under every age
+group and for every gender. A non-`active` status is shown as
+**Legacy · no longer enrolling**.
 
 ## Data sources & disclaimer
 

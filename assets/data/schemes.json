@@ -28,6 +28,9 @@
     "age_group": [
       "all"
     ],
+    "gender": [
+      "all"
+    ],
     "income_max_annual": 120000
   },
   {
@@ -57,6 +60,9 @@
     "age_group": [
       "all"
     ],
+    "gender": [
+      "all"
+    ],
     "income_max_annual": 100000
   },
   {
@@ -83,6 +89,9 @@
       "family"
     ],
     "age_group": [
+      "all"
+    ],
+    "gender": [
       "all"
     ],
     "income_max_annual": 100000
@@ -114,6 +123,9 @@
     "age_group": [
       "all"
     ],
+    "gender": [
+      "all"
+    ],
     "income_max_annual": null
   },
   {
@@ -139,6 +151,9 @@
     ],
     "audience": [],
     "age_group": [
+      "all"
+    ],
+    "gender": [
       "all"
     ],
     "income_max_annual": null
@@ -171,6 +186,9 @@
     "age_group": [
       "all"
     ],
+    "gender": [
+      "all"
+    ],
     "income_max_annual": null
   },
   {
@@ -195,6 +213,9 @@
     ],
     "audience": [],
     "age_group": [
+      "all"
+    ],
+    "gender": [
       "all"
     ],
     "income_max_annual": null
@@ -227,6 +248,9 @@
     "age_group": [
       "all"
     ],
+    "gender": [
+      "all"
+    ],
     "income_max_annual": null
   },
   {
@@ -257,6 +281,9 @@
       "adult",
       "child"
     ],
+    "gender": [
+      "all"
+    ],
     "income_max_annual": 252000
   },
   {
@@ -284,6 +311,9 @@
     ],
     "age_group": [
       "adult"
+    ],
+    "gender": [
+      "female"
     ],
     "income_max_annual": null
   },
@@ -316,6 +346,9 @@
       "adult",
       "child"
     ],
+    "gender": [
+      "all"
+    ],
     "income_max_annual": null
   },
   {
@@ -345,6 +378,9 @@
     "age_group": [
       "child"
     ],
+    "gender": [
+      "all"
+    ],
     "income_max_annual": null
   },
   {
@@ -372,6 +408,9 @@
     ],
     "age_group": [
       "adult"
+    ],
+    "gender": [
+      "female"
     ],
     "income_max_annual": null
   },
@@ -403,6 +442,9 @@
       "child",
       "adult"
     ],
+    "gender": [
+      "all"
+    ],
     "income_max_annual": null
   },
   {
@@ -433,6 +475,9 @@
       "child",
       "adult"
     ],
+    "gender": [
+      "all"
+    ],
     "income_max_annual": null
   },
   {
@@ -460,6 +505,9 @@
       "patient"
     ],
     "age_group": [
+      "all"
+    ],
+    "gender": [
       "all"
     ],
     "income_max_annual": null
@@ -491,6 +539,9 @@
     "age_group": [
       "all"
     ],
+    "gender": [
+      "all"
+    ],
     "income_max_annual": null
   },
   {
@@ -518,6 +569,9 @@
       "family"
     ],
     "age_group": [
+      "all"
+    ],
+    "gender": [
       "all"
     ],
     "income_max_annual": 100000
@@ -550,6 +604,9 @@
     "age_group": [
       "all"
     ],
+    "gender": [
+      "all"
+    ],
     "income_max_annual": null
   },
   {
@@ -575,6 +632,9 @@
     ],
     "audience": [],
     "age_group": [
+      "all"
+    ],
+    "gender": [
       "all"
     ],
     "income_max_annual": null
@@ -603,6 +663,9 @@
       "patient"
     ],
     "age_group": [
+      "all"
+    ],
+    "gender": [
       "all"
     ],
     "income_max_annual": null
@@ -636,6 +699,9 @@
       "child",
       "adult"
     ],
+    "gender": [
+      "all"
+    ],
     "income_max_annual": null
   },
   {
@@ -660,6 +726,9 @@
     ],
     "audience": [],
     "age_group": [
+      "all"
+    ],
+    "gender": [
       "all"
     ],
     "income_max_annual": null

@@ -42,7 +42,7 @@
 
   var DATA = [];   // loaded from schemes.json
   var cats = [];   // derived categories for the dropdown
-  var st = {aud:'', q:'', cat:'', age:'', income:'', stat:'', sort:'cat', saved:[], cmp:[], onlySaved:false, page:1};
+  var st = {aud:'', q:'', cat:'', age:'', gender:'', income:'', min:'', type:'', stat:'', sort:'cat', saved:[], cmp:[], onlySaved:false, page:1};
 
   var $ = function(i){ return document.getElementById(i); };
 
@@ -63,12 +63,14 @@
   st.saved = store('ys_saved') || [];
   var size = store('ys_size') || 1;
   var theme = store('ys_theme') || 'light';
+  var filtersOpen = store('ys_filters') === true;   // filter panel starts collapsed
 
   function applyPrefs(){
     document.documentElement.style.setProperty('--fs', size);
     document.documentElement.setAttribute('data-theme', theme);
   }
   applyPrefs();
+  setFiltersOpen(filtersOpen);
 
   /* ---------- delegates ---------- */
   function forEach(els, fn){ Array.prototype.forEach.call(els, fn); }
@@ -78,10 +80,24 @@
   function byId(id){ return DATA.filter(function(s){ return s.id === id; })[0]; }
   function accentOf(cat){ return CAT_COLORS[cat] || '#0e2a55'; }
   function ageLabel(k){ return {all:'All ages', child:'Children (0–17)', adult:'Adults (18–59)', senior:'Seniors (60+)', senior70:'Seniors 70+'}[k] || k; }
+  function genderLabel(k){ return {all:'All genders', female:'Women', male:'Men'}[k] || k; }
   function rs(n){ return n.toLocaleString('en-IN'); }
   function incomeLimitText(s){
     if (s.income_max_annual == null) return 'No income limit.';
     return 'Up to ₹' + rs(s.income_max_annual) + ' per year.';
+  }
+  function activeFilters(){
+    var n = 0;
+    if (st.q.trim()) n++;
+    if (st.aud) n++;
+    if (st.cat) n++;
+    if (st.age) n++;
+    if (st.gender) n++;
+    if (st.income.trim()) n++;
+    if (st.stat) n++;
+    if (st.min) n++;
+    if (st.type) n++;
+    return n;
   }
 
   /* ---------- icons (Feather-style inline SVG, stroke = currentColor) ---------- */
@@ -114,6 +130,17 @@
     $('age').innerHTML = AGE_GROUPS.map(function(a){
       return '<option value="' + a[0] + '">' + esc(a[1]) + '</option>';
     }).join('');
+    var mins = [], types = [];
+    DATA.forEach(function(s){
+      if (s.ministry && mins.indexOf(s.ministry) < 0) mins.push(s.ministry);
+      if (s.scheme_type && types.indexOf(s.scheme_type) < 0) types.push(s.scheme_type);
+    });
+    mins.sort(function(a, b){ return a.localeCompare(b); });
+    types.sort(function(a, b){ return a.localeCompare(b); });
+    $('min').innerHTML = '<option value="">All ministries</option>' +
+      mins.map(function(m){ return '<option>' + esc(m) + '</option>'; }).join('');
+    $('type').innerHTML = '<option value="">All scheme types</option>' +
+      types.map(function(t){ return '<option>' + esc(t) + '</option>'; }).join('');
   }
 
   function chips(){
@@ -122,10 +149,13 @@
     }).join('');
   }
 
+  /* Any .seg[data-seg-key] group reads/writes its own st[key] value. */
   function segSync(){
-    var active = st.stat;
-    forEach($('statSeg').querySelectorAll('.seg-btn'), function(b){
-      b.setAttribute('aria-pressed', String(b.getAttribute('data-stat') === active));
+    forEach(document.querySelectorAll('.seg[data-seg-key]'), function(seg){
+      var val = st[seg.getAttribute('data-seg-key')];
+      forEach(seg.querySelectorAll('.seg-btn'), function(b){
+        b.setAttribute('aria-pressed', String(b.getAttribute('data-val') === val));
+      });
     });
   }
 
@@ -136,6 +166,9 @@
       if (st.aud && s.audience.indexOf(st.aud) < 0) return false;
       if (st.cat && s.category !== st.cat) return false;
       if (st.age && (s.age_group || []).indexOf('all') < 0 && (s.age_group || []).indexOf(st.age) < 0) return false;
+      if (st.gender && (s.gender || ['all']).indexOf('all') < 0 && (s.gender || ['all']).indexOf(st.gender) < 0) return false;
+      if (st.min && s.ministry !== st.min) return false;
+      if (st.type && s.scheme_type !== st.type) return false;
       if (st.income && s.income_max_annual != null){
         var annual = parseFloat(st.income) * 12;
         if (isFinite(annual) && annual > s.income_max_annual) return false;
@@ -206,6 +239,8 @@
     $('cat').value = st.cat;
     $('age').value = st.age;
     $('income').value = st.income;
+    $('min').value = st.min;
+    $('type').value = st.type;
     var hasPages = r.length > PAGE_SIZE;
     $('pages').style.display = hasPages ? 'flex' : 'none';
     $('pageInfo').textContent = 'Page ' + st.page + ' of ' + totalPages;
@@ -220,6 +255,9 @@
     $('trayTxt').textContent = n + ' selected' + (n < 2 ? ' – pick at least 2 to compare' : '');
     $('goCmp').disabled = n < 2;
     syncIncomeClear();
+    var nF = activeFilters();
+    $('filtersCount').textContent = nF;
+    $('filtersCount').hidden = nF === 0;
   }
 
   function toast(m){
@@ -241,6 +279,7 @@
         dt(ico('user') + '<span>Who can use it</span>', esc(s.eligibility)) +
         dt(ico('users') + '<span>Meant for</span>', esc(s.target_beneficiaries)) +
         dt(ico('activity') + '<span>Age group</span>', (s.age_group || ['all']).map(ageLabel).join(', ')) +
+        dt(ico('users') + '<span>Gender</span>', (s.gender || ['all']).map(genderLabel).join(', ')) +
         dt(ico('rupee') + '<span>Income limit</span>', incomeLimitText(s)) +
         dt(ico('list') + '<span>Key features</span>',
           '<ul>' + s.key_features.map(function(f){ return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>') +
@@ -295,6 +334,16 @@
 
   function syncIncomeClear(){
     $('incClear').classList.toggle('show', st.income.trim().length > 0);
+  }
+
+  /* Collapsible filter panel. A collapsed panel is made inert so its controls
+     leave the tab order instead of trapping focus in a zero-height box. */
+  function setFiltersOpen(open){
+    filtersOpen = !!open;
+    $('filtersBtn').setAttribute('aria-expanded', String(filtersOpen));
+    $('filtersPanel').classList.toggle('collapsed', !filtersOpen);
+    if ('inert' in HTMLElement.prototype) $('filtersPanel').inert = !filtersOpen;
+    store('ys_filters', filtersOpen);
   }
 
   function bindEvents(){
@@ -361,18 +410,23 @@
       render();
       $('income').focus();
     });
-    $('statSeg').addEventListener('click', function(e){
-      var b = e.target.closest('.seg-btn');
-      if (!b) return;
-      st.stat = b.getAttribute('data-stat');
-      st.page = 1;
-      render();
+    forEach(document.querySelectorAll('.seg[data-seg-key]'), function(seg){
+      seg.addEventListener('click', function(e){
+        var b = e.target.closest('.seg-btn');
+        if (!b) return;
+        st[seg.getAttribute('data-seg-key')] = b.getAttribute('data-val');
+        st.page = 1;
+        render();
+      });
     });
     $('sort').addEventListener('change', function(e){ st.sort = e.target.value; st.page = 1; render(); });
+    $('min').addEventListener('change', function(e){ st.min = e.target.value; st.page = 1; render(); });
+    $('type').addEventListener('change', function(e){ st.type = e.target.value; st.page = 1; render(); });
+    $('filtersBtn').addEventListener('click', function(){ setFiltersOpen(!filtersOpen); });
 
     $('clear').addEventListener('click', function(){
-      st.aud = ''; st.q = ''; st.cat = ''; st.age = ''; st.income = ''; st.stat = ''; st.onlySaved = false; st.page = 1;
-      $('q').value = ''; $('cat').value = ''; $('age').value = ''; $('income').value = '';
+      st.aud = ''; st.q = ''; st.cat = ''; st.age = ''; st.gender = ''; st.income = ''; st.min = ''; st.type = ''; st.stat = ''; st.onlySaved = false; st.page = 1;
+      $('q').value = ''; $('cat').value = ''; $('age').value = ''; $('income').value = ''; $('min').value = ''; $('type').value = '';
       render();
       syncClearBtn();
     });
