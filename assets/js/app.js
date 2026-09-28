@@ -246,7 +246,6 @@
     $('pageInfo').textContent = 'Page ' + st.page + ' of ' + totalPages;
     $('prevBtn').disabled = st.page <= 1;
     $('nextBtn').disabled = st.page >= totalPages;
-    $('savedCount').textContent = st.saved.length;
     $('btnSaved').setAttribute('aria-pressed', st.onlySaved);
     chips();
     segSync();

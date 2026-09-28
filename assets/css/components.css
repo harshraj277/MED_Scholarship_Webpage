@@ -23,26 +23,27 @@
 .nav{margin-left:auto;display:flex;align-items:center;gap:.4rem}
 .nav a,.nav button{background:none;border:1px solid transparent;color:#fff;text-decoration:none;padding:.45rem .8rem;border-radius:999px;font-size:.95rem}
 .nav a:hover,.nav button:hover{border-color:var(--gold)}
-.nav .count{background:var(--gold);color:#111;border-radius:999px;padding:0 .5rem;margin-left:.3rem;font-weight:600;font-size:.85rem}
 @media (max-width:640px){.nav a.hide-s{display:none}.brand small{display:none}}
 
 /* ---------- hero ---------- */
 .hero{background:radial-gradient(1100px 520px at 88% -12%,rgba(199,155,43,.25),transparent 62%),linear-gradient(165deg,#153467 0%,var(--navy) 48%,var(--navy-deep) 100%);color:#fff;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.09) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(180deg,#000,transparent 70%);mask-image:linear-gradient(180deg,#000,transparent 70%);opacity:.5;pointer-events:none}
 .hero::after{content:"";position:absolute;right:-140px;top:-90px;width:520px;height:520px;border-radius:50%;border:3px solid var(--gold);opacity:.55;pointer-events:none;animation:ring-spin 80s linear infinite}
-.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .75fr;gap:2.5rem;padding:3.5rem 0 4.5rem;align-items:center}
+/* padding-block, not the padding shorthand: a `0` side value here would
+   override .wrap's horizontal gutter and leave the hero flush to the edges. */
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.25fr .75fr;gap:2.5rem;padding-block:3.5rem 4.5rem;align-items:center}
 .hero h1{font-size:clamp(2.3rem,5.4vw,4rem);font-weight:700;max-width:14ch}
 .hero .hi{font-size:1.2rem;color:var(--gold-soft);margin:1rem 0 0}
 .hero p.lead{max-width:52ch;font-size:1.15rem;margin:1rem 0 0;color:#dbe4f5}
 .hero .mark{justify-self:center;position:relative}
 .hero .mark::after{content:"";position:absolute;inset:-36px;border-radius:50%;border:1.5px dashed rgba(199,155,43,.55);animation:ring-spin 50s linear infinite reverse;pointer-events:none}
-.hero .mark img{width:min(300px,60vw);border-radius:50%;box-shadow:0 0 0 6px rgba(199,155,43,.25);display:block}
+.hero .mark img{width:clamp(300px,20vw,420px);border-radius:50%;box-shadow:0 0 0 6px rgba(199,155,43,.25);display:block}
 .hero-cta{margin-top:1.6rem;display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap}
 .btn-hero{background:var(--gold);border-color:var(--gold);color:#111;font-weight:600;padding:.65rem 1.35rem;min-height:48px;font-size:1.05rem;box-shadow:0 8px 22px rgba(199,155,43,.35)}
 .btn-hero:hover{background:#d9ad3a;border-color:#d9ad3a;transform:translateY(-1px);box-shadow:0 10px 26px rgba(199,155,43,.45)}
 .hero .trust{color:#aebde0;font-size:.9rem;margin:.15rem 0 0}
 .hero .trust b{color:var(--gold-soft);font-weight:600}
-@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding:2.5rem 0 3.5rem}.hero .mark{display:none}}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-block:2.5rem 3.5rem}.hero .mark{display:none}}
 
 /* ---------- audience chips ---------- */
 .who{margin-top:-2.2rem;position:relative;z-index:2}
@@ -55,10 +56,7 @@
 
 /* ---------- finder ---------- */
 .finder{padding:2.5rem 0 3rem}
-.bar{display:grid;grid-template-columns:repeat(5,1fr);gap:.7rem;margin-bottom:1rem}
-.bar .s{grid-column:1/-1}
-@media (max-width:900px){.bar{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:480px){.bar{grid-template-columns:1fr}}
+.bar{margin-bottom:1rem}
 label.f{display:block;font-size:.85rem;color:var(--muted);margin-bottom:.2rem}
 input[type=search],input[type=number],select{width:100%;font:inherit;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:8px;padding:.6rem .7rem;min-height:46px}
 input[type=search]{padding-right:2.3rem}
@@ -67,17 +65,29 @@ input[type=search]{padding-right:2.3rem}
 .q-clear.show{display:grid}
 .q-clear:hover{background:var(--line);color:var(--ink)}
 .inc-wrap .q-clear{right:2rem}
-.s-row{display:flex;gap:.6rem}
-.s-row .input-wrap{flex:1}
-.filters-btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-height:46px;font-weight:600}
+/* Search + Filters read as one control group; capping the group stops the
+   single search field from stretching across a wide desktop viewport.
+   align-items:stretch keeps the button exactly as tall as the search field
+   (its own min-height is overridden by the later .btn rule, so don't set it). */
+.s-row{display:flex;gap:.6rem;align-items:stretch;max-width:46rem}
+.s-row .input-wrap{flex:1 1 12rem;min-width:0}
+.s-row .filters-btn{flex:none;display:inline-flex;white-space:nowrap;align-items:center;justify-content:center;gap:.45rem;font-weight:600}
 .filters-btn .caret{display:inline-block;transition:transform .2s ease}
 .filters-btn[aria-expanded="false"] .caret{transform:rotate(-90deg)}
 .filters-btn .count{background:var(--gold);color:#111;border-radius:999px;padding:0 .5rem;font-size:.8rem;font-weight:600;line-height:1.6}
-.filters{grid-column:1/-1;display:grid;grid-template-rows:1fr;transition:grid-template-rows .35s ease,opacity .3s ease}
-.filters-inner{min-height:0;overflow:hidden;display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;padding:1rem;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+/* Panel is a 1fr/0fr row wrapper so it collapses to its own content height at
+   any width. Columns are intrinsic (auto-fill) rather than hardcoded, so the
+   panel reflows continuously between desktop, tablet and phone. auto-fill (not
+   auto-fit) keeps a short last row from stretching one control full width.
+   Collapsing the row alone still leaves the inner's 1rem padding + 1px border
+   rendering (34px of dead band), so the box chrome is collapsed too. */
+.filters{display:grid;grid-template-rows:1fr;transition:grid-template-rows .35s ease,opacity .3s ease}
+.filters-inner{min-height:0;overflow:hidden;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.9rem;padding:1rem;background:var(--surface);border:1px solid var(--line);border-radius:10px;transition:padding .3s ease,border-width .3s ease}
+/* 8 controls: cap at 4 columns once full-bleed would otherwise reach 5-7,
+   which leaves ragged one/two-control rows. */
+@media (min-width:1100px){.filters-inner{grid-template-columns:repeat(4,1fr)}}
 .filters.collapsed{grid-template-rows:0fr;opacity:0}
-@media (max-width:900px){.filters-inner{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:480px){.filters-inner{grid-template-columns:1fr}}
+.filters.collapsed .filters-inner{padding-top:0;padding-bottom:0;border-width:0}
 .seg{display:flex;gap:3px;background:var(--chip);border:1px solid var(--line);border-radius:10px;padding:3px;min-height:46px;align-items:stretch}
 .seg-btn{flex:1 1 0;border:0;background:transparent;border-radius:8px;color:var(--muted);font-size:.9rem;padding:.35rem .3rem;min-width:0}
 .seg-btn:hover{color:var(--ink)}
@@ -87,7 +97,11 @@ input[type=search]{padding-right:2.3rem}
 .pill{display:inline-block;background:var(--navy);color:#fff;border-radius:999px;padding:.08rem .62rem;font-size:.92rem;vertical-align:2px;font-weight:600;font-family:"Hind",sans-serif;line-height:1.45}
 .meta .clear{background:none;border:0;text-decoration:underline;color:var(--muted);padding:.3rem}
 .meta .clear:hover{color:var(--navy)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1rem}
+/* 300px (not 310) so 3 columns still fit at 1024px once .wrap's gutter
+   is subtracted. 6 cards per page: 5+1 or 6+0 on a very wide full-bleed
+   screen is too dense and ragged, so hold 4 columns there (4+2). */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem}
+@media (min-width:1620px){.grid{grid-template-columns:repeat(4,1fr)}}
 .card{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent,var(--navy));border-radius:10px;padding:1.1rem 1.15rem 1rem;display:flex;flex-direction:column;gap:.55rem;position:relative;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;animation:fadeUp .35s ease both;animation-delay:var(--d,0ms)}
 .card:hover{transform:translateY(-3px);border-color:var(--accent,var(--navy));box-shadow:0 14px 30px rgba(8,28,61,.15);z-index:1}
 .card.legacy{border-style:solid;border-top-style:solid}

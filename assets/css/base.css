@@ -38,7 +38,10 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
 
 /* Layout + a11y helpers */
-.wrap{width:min(1180px,100% - 2rem);margin-inline:auto}
+/* Full-bleed with a comfortable gutter: padding is inside the box
+   (box-sizing:border-box), so the 1920px cap is the outer edge and no
+   horizontal scrollbar appears. */
+.wrap{width:100%;max-width:1920px;padding-inline:1.5rem;margin-inline:auto}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .skip{position:absolute;left:-999px;top:0;background:var(--gold);color:#111;padding:.6rem 1rem;z-index:100}
 .skip:focus{left:0}
