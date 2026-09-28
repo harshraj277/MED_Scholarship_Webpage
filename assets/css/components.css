@@ -65,11 +65,13 @@ input[type=search]{padding-right:2.3rem}
 .q-clear.show{display:grid}
 .q-clear:hover{background:var(--line);color:var(--ink)}
 .inc-wrap .q-clear{right:2rem}
-/* Search + Filters read as one control group; capping the group stops the
-   single search field from stretching across a wide desktop viewport.
+/* Search + Filters read as one control group spanning the full page width, so
+   the toolbar lines up with the filter panel and card grid below it instead of
+   floating as a 736px island on a wide screen.
    align-items:stretch keeps the button exactly as tall as the search field
-   (its own min-height is overridden by the later .btn rule, so don't set it). */
-.s-row{display:flex;gap:.6rem;align-items:stretch;max-width:46rem}
+   (its own min-height is overridden by the later .btn rule, so don't set it).
+   padding-bottom gives the search bar breathing room above the panel. */
+.s-row{display:flex;gap:.6rem;align-items:stretch;padding-bottom:.9rem}
 .s-row .input-wrap{flex:1 1 12rem;min-width:0}
 .s-row .filters-btn{flex:none;display:inline-flex;white-space:nowrap;align-items:center;justify-content:center;gap:.45rem;font-weight:600}
 .filters-btn .caret{display:inline-block;transition:transform .2s ease}
