@@ -31,6 +31,9 @@
   .card .short{background:#333;color:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .badge{border:1px solid currentColor;background:none;padding:.05rem .6rem}
   .badge.legacy{border-color:#666;background:none;color:#555}
+  .badge.verify{border-style:dashed;border-color:#666;color:#555}
+  .note-warn{background:none;border:1px dashed #666;color:#333}
+  .inc-warn{background:none;border:1px solid #666;color:#333}
 
   .how{background:none;border:0;padding:1rem 0}
   .steps{gap:0}

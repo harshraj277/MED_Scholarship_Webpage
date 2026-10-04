@@ -42,7 +42,7 @@
       <p class="lead">See which central government health schemes fit your situation, what they pay for, and where to apply. No jargon, no sign-up.</p>
       <div class="hero-cta">
         <a class="btn btn-hero" href="#finder">Find my scheme <span aria-hidden="true">↓</span></a>
-        <p class="trust"><b id="schemeCount">23</b> schemes · data compiled 10 Sep 2026</p>
+        <p class="trust"><b id="schemeCount">89</b> schemes · 23 verified against official sources</p>
       </div>
     </div>
     <div class="mark"><img src="assets/img/logo.webp" alt="Yojana Setu emblem" width="300" height="300"></div>
@@ -70,14 +70,14 @@
       </div>
       <div class="filters collapsed" id="filtersPanel">
         <div class="filters-inner">
-          <div><label class="f" for="cat">Type of help</label><select id="cat"></select></div>
+          <div><label class="f" for="cat">Category</label><select id="cat"></select></div>
           <div><label class="f" for="age">Age group</label><select id="age"></select></div>
           <div><label class="f" id="genderLbl">Gender</label><div class="seg" id="genderSeg" role="group" aria-labelledby="genderLbl" data-seg-key="gender"><button class="seg-btn" type="button" data-val="" aria-pressed="true">All</button><button class="seg-btn" type="button" data-val="female">Women</button><button class="seg-btn" type="button" data-val="male">Men</button></div></div>
           <div><label class="f" for="income">Max monthly income (₹)</label><div class="input-wrap inc-wrap"><input id="income" type="number" min="0" step="500" inputmode="numeric" placeholder="e.g. 10000"><button id="incClear" class="q-clear" type="button" aria-label="Clear income">×</button></div></div>
           <div><label class="f" for="min">Ministry</label><select id="min"></select></div>
-          <div><label class="f" for="type">Scheme type</label><select id="type"></select></div>
+          <div><label class="f" for="type">Kind of scheme</label><select id="type"></select></div>
           <div><label class="f" id="statLbl">Status</label><div class="seg" id="statSeg" role="group" aria-labelledby="statLbl" data-seg-key="stat"><button class="seg-btn" type="button" data-val="" aria-pressed="true">All</button><button class="seg-btn" type="button" data-val="active">Active</button><button class="seg-btn" type="button" data-val="legacy">Legacy</button></div></div>
-          <div><label class="f" for="sort">Sort by</label><select id="sort"><option value="cat">Type of help</option><option value="az">Name A–Z</option><option value="new">Newest first</option><option value="old">Oldest first</option></select></div>
+          <div><label class="f" for="sort">Sort by</label><select id="sort"><option value="cat">Category</option><option value="az">Name A–Z</option><option value="new">Newest first</option><option value="old">Oldest first</option></select></div>
         </div>
       </div>
     </div>
@@ -85,6 +85,7 @@
       <h2 id="resH" aria-live="polite"></h2>
       <button class="clear" id="clear" type="button">Clear all filters</button>
     </div>
+    <p class="inc-warn" id="incWarn" role="status" hidden></p>
     <div class="grid" id="grid"></div>
     <nav class="pages" id="pages" aria-label="Pagination">
       <button class="btn ghost" id="prevBtn" type="button" aria-label="Previous page">← Previous</button>
@@ -111,7 +112,7 @@
     <div>
       <h2>Yojana Setu</h2>
       <p><strong>Information only.</strong> This is not an official government portal. Amounts and eligibility change, so confirm on the scheme's official website before you apply.</p>
-      <p>Covers central government health schemes. State schemes are not included yet. Data compiled on 10 September 2026.</p>
+      <p>Covers central government health schemes; state schemes are not included yet. 23 schemes were checked against official sources on 10 September 2026 — the rest are marked <em>Needs verification</em>, so treat their figures as a starting point only.</p>
     </div>
     <div class="f-links">
       <h2>Browse by category</h2>
@@ -121,6 +122,8 @@
         <li><button class="fq" type="button" data-cat="Immunization">Immunisation</button></li>
         <li><button class="fq" type="button" data-cat="Medicine Access">Affordable medicines</button></li>
         <li><button class="fq" type="button" data-cat="Mental Health">Mental health support</button></li>
+        <li><button class="fq" type="button" data-cat="Disease Control">Disease control</button></li>
+        <li><button class="fq" type="button" data-cat="Emergency &amp; Trauma Care">Emergency &amp; trauma care</button></li>
       </ul>
     </div>
     <div class="partner">

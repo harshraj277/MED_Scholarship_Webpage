@@ -8,6 +8,7 @@
     "implementing_body": "National Health Authority",
     "launch_year": 2018,
     "scheme_type": "Health insurance (cashless)",
+    "help_type": "Health insurance",
     "status": "active",
     "description": "A public health assurance scheme that pays for hospital care at empanelled public and private hospitals, without the patient paying at the counter.",
     "coverage_amount": "Up to ₹5 lakh per family per year for secondary and tertiary hospitalisation.",
@@ -31,7 +32,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": 120000
+    "income_max_annual": 120000,
+    "income_note": "Eligibility is SECC 2011 deprivation and occupational category, not a published income figure. ₹1,20,000 a year approximates the bottom-40% threshold.",
+    "verified": true,
+    "notes": "Over 42 crore Ayushman Cards issued as of late 2025 per government/media reporting; figures updated periodically."
   },
   {
     "id": "RAN",
@@ -42,6 +46,7 @@
     "implementing_body": "Ministry of Health and Family Welfare",
     "launch_year": 1997,
     "scheme_type": "Financial assistance",
+    "help_type": "Cash assistance",
     "status": "active",
     "description": "One-time financial help for patients living below the poverty line who need treatment for a life-threatening disease at a government hospital.",
     "coverage_amount": "Assistance per case, as sanctioned by the scheme's committee. Check the official site for current limits.",
@@ -63,7 +68,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": 100000
+    "income_max_annual": 100000,
+    "income_note": "The test is BPL status on the state BPL list, not a published rupee figure. ₹1,00,000 a year approximates the BPL threshold.",
+    "verified": true,
+    "notes": null
   },
   {
     "id": "RSBY",
@@ -74,6 +82,7 @@
     "implementing_body": "Ministry of Labour and Employment",
     "launch_year": 2008,
     "scheme_type": "Health insurance (legacy)",
+    "help_type": "Health insurance",
     "status": "inactive/subsumed",
     "description": "Earlier smart-card based health insurance for BPL families. Its work has been taken over by Ayushman Bharat PM-JAY.",
     "coverage_amount": "Historically ₹30,000 per family per year. No longer enrolling.",
@@ -94,7 +103,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": 100000
+    "income_max_annual": 100000,
+    "income_note": "The test was BPL status. ₹1,00,000 a year approximates the BPL threshold (scheme now closed).",
+    "verified": true,
+    "notes": null
   },
   {
     "id": "AB-HWC",
@@ -105,6 +117,7 @@
     "implementing_body": "National Health Mission",
     "launch_year": 2018,
     "scheme_type": "Primary health care",
+    "help_type": "Primary care & hospitals",
     "status": "active",
     "description": "Upgraded sub-centres and primary health centres that offer a wider range of primary care close to home, including screening and follow-up for common long-term conditions.",
     "coverage_amount": "Free primary care services at the centre.",
@@ -126,7 +139,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
   },
   {
     "id": "PM-ABHIM",
@@ -137,6 +153,7 @@
     "implementing_body": "Ministry of Health and Family Welfare",
     "launch_year": 2021,
     "scheme_type": "Infrastructure funding",
+    "help_type": "Primary care & hospitals",
     "status": "active",
     "description": "A large investment programme to build up health systems: primary care, critical care blocks, laboratories and disease surveillance.",
     "coverage_amount": "Multi-year central and state outlay for infrastructure, not payments to individuals.",
@@ -156,7 +173,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
   },
   {
     "id": "NHM",
@@ -167,6 +187,7 @@
     "implementing_body": "Ministry of Health and Family Welfare",
     "launch_year": 2013,
     "scheme_type": "Umbrella health mission",
+    "help_type": "Primary care & hospitals",
     "status": "active",
     "description": "The main central programme supporting states to run public health services, made up of the rural (NRHM) and urban (NUHM) missions.",
     "coverage_amount": "Free services at public health facilities.",
@@ -189,7 +210,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
   },
   {
     "id": "PMSSY",
@@ -200,6 +224,7 @@
     "implementing_body": "Ministry of Health and Family Welfare",
     "launch_year": 2003,
     "scheme_type": "Tertiary care infrastructure",
+    "help_type": "Primary care & hospitals",
     "status": "active",
     "description": "Sets up new AIIMS-like institutes and upgrades government medical colleges so that advanced care and medical education are available in more regions.",
     "coverage_amount": "Institutional funding, not individual payments.",
@@ -218,7 +243,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
   },
   {
     "id": "CGHS",
@@ -229,6 +257,7 @@
     "implementing_body": "Directorate General of CGHS",
     "launch_year": 1954,
     "scheme_type": "Comprehensive health cover",
+    "help_type": "Health insurance",
     "status": "active",
     "description": "Health care for serving and retired central government employees and their eligible dependants, through wellness centres and empanelled hospitals.",
     "coverage_amount": "Cashless treatment as per CGHS rates. Contribution depends on pay level.",
@@ -251,7 +280,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": "Contribution slabs and empanelled hospital rates are revised periodically - verify current rates on official portal."
   },
   {
     "id": "ESIC",
@@ -262,6 +294,7 @@
     "implementing_body": "Employees' State Insurance Corporation",
     "launch_year": 1952,
     "scheme_type": "Social security insurance",
+    "help_type": "Health insurance",
     "status": "active",
     "description": "A self-financed social security scheme giving medical care and cash benefits to workers in covered establishments.",
     "coverage_amount": "Full medical care plus cash benefits for sickness, maternity, disablement and dependants.",
@@ -284,7 +317,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": 252000
+    "income_max_annual": 252000,
+    "income_note": "Wage ceiling of ₹21,000 a month, or ₹25,000 for persons with disabilities.",
+    "verified": true,
+    "notes": null
   },
   {
     "id": "JSY",
@@ -295,6 +331,7 @@
     "implementing_body": "National Health Mission",
     "launch_year": 2005,
     "scheme_type": "Cash incentive",
+    "help_type": "Cash assistance",
     "status": "active",
     "description": "A cash incentive to encourage women to deliver in a government or accredited health facility rather than at home.",
     "coverage_amount": "Rural ₹1,400 and urban ₹1,000 in low performing states. ₹700 rural and ₹600 urban in high performing states.",
@@ -315,7 +352,10 @@
     "gender": [
       "female"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
   },
   {
     "id": "JSSK",
@@ -326,6 +366,7 @@
     "implementing_body": "National Health Mission",
     "launch_year": 2011,
     "scheme_type": "Free entitlements",
+    "help_type": "Free medicines & tests",
     "status": "active",
     "description": "Free and cashless services for pregnant women and sick newborns at government health facilities.",
     "coverage_amount": "No out-of-pocket cost for delivery and newborn care in public facilities.",
@@ -349,7 +390,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
   },
   {
     "id": "RBSK",
@@ -360,6 +404,7 @@
     "implementing_body": "National Health Mission",
     "launch_year": 2013,
     "scheme_type": "Screening and early intervention",
+    "help_type": "Screening & prevention",
     "status": "active",
     "description": "Children are screened for common health problems at birth, at Anganwadi centres and in schools, and referred for free treatment.",
     "coverage_amount": "Free screening and treatment referral.",
@@ -381,7 +426,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
   },
   {
     "id": "PMSMA",
@@ -392,6 +440,7 @@
     "implementing_body": "National Health Mission",
     "launch_year": 2016,
     "scheme_type": "Antenatal care",
+    "help_type": "Primary care & hospitals",
     "status": "active",
     "description": "Every pregnant woman can get a free check-up by a doctor on the 9th of each month at public health facilities.",
     "coverage_amount": "Free antenatal check-ups.",
@@ -412,7 +461,10 @@
     "gender": [
       "female"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
   },
   {
     "id": "MI",
@@ -423,6 +475,7 @@
     "implementing_body": "Ministry of Health and Family Welfare",
     "launch_year": 2014,
     "scheme_type": "Immunisation drive",
+    "help_type": "Immunisation",
     "status": "active",
     "description": "Special campaigns to reach children and pregnant women who missed routine vaccination.",
     "coverage_amount": "Free vaccines.",
@@ -445,7 +498,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
   },
   {
     "id": "UIP",
@@ -456,6 +512,7 @@
     "implementing_body": "Ministry of Health and Family Welfare",
     "launch_year": 1985,
     "scheme_type": "Routine immunisation",
+    "help_type": "Immunisation",
     "status": "active",
     "description": "Free routine vaccination for children and pregnant women against several vaccine-preventable diseases.",
     "coverage_amount": "Free vaccines at government health facilities.",
@@ -478,7 +535,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
   },
   {
     "id": "NTEP",
@@ -489,6 +549,7 @@
     "implementing_body": "Central TB Division",
     "launch_year": 2020,
     "scheme_type": "Disease control",
+    "help_type": "Free medicines & tests",
     "status": "active",
     "description": "Free diagnosis and treatment for tuberculosis, with financial support for nutrition during treatment.",
     "coverage_amount": "Free tests and drugs. Nutrition support of ₹1,000 per month during treatment (Ni-kshay Poshan Yojana).",
@@ -510,7 +571,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
   },
   {
     "id": "NACP",
@@ -521,6 +585,7 @@
     "implementing_body": "National AIDS Control Organisation",
     "launch_year": 1992,
     "scheme_type": "Disease control",
+    "help_type": "Screening & prevention",
     "status": "active",
     "description": "Prevention, testing and free treatment for HIV and AIDS.",
     "coverage_amount": "Free testing, counselling and antiretroviral therapy.",
@@ -542,7 +607,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
   },
   {
     "id": "PMNDP",
@@ -553,6 +621,7 @@
     "implementing_body": "National Health Mission",
     "launch_year": 2016,
     "scheme_type": "Free dialysis",
+    "help_type": "Free medicines & tests",
     "status": "active",
     "description": "Free dialysis services for poor patients with kidney failure at district hospitals.",
     "coverage_amount": "Free dialysis sessions for eligible patients.",
@@ -574,7 +643,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": 100000
+    "income_max_annual": 100000,
+    "income_note": "The test is state-defined BPL status. ₹1,00,000 a year approximates the BPL threshold.",
+    "verified": true,
+    "notes": null
   },
   {
     "id": "PMBJP",
@@ -585,6 +657,7 @@
     "implementing_body": "Bureau of Pharma PSUs of India",
     "launch_year": 2008,
     "scheme_type": "Affordable medicines",
+    "help_type": "Free medicines & tests",
     "status": "active",
     "description": "Quality generic medicines are sold at Janaushadhi Kendras at prices far below branded equivalents.",
     "coverage_amount": "Medicines priced much lower than branded ones.",
@@ -607,7 +680,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
   },
   {
     "id": "ABDM",
@@ -618,6 +694,7 @@
     "implementing_body": "National Health Authority",
     "launch_year": 2021,
     "scheme_type": "Digital health",
+    "help_type": "Tele-health & digital records",
     "status": "active",
     "description": "A digital health system that lets people create an ABHA number and keep their health records in one place.",
     "coverage_amount": "Free ABHA number and health records.",
@@ -637,7 +714,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
   },
   {
     "id": "NMHP",
@@ -648,6 +728,7 @@
     "implementing_body": "Ministry of Health and Family Welfare",
     "launch_year": 1982,
     "scheme_type": "Mental health services",
+    "help_type": "Mental health support",
     "status": "active",
     "description": "Mental health care through district programmes and the Tele MANAS helpline.",
     "coverage_amount": "Free counselling helpline and services at public facilities.",
@@ -668,7 +749,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
   },
   {
     "id": "POSHAN",
@@ -679,6 +763,7 @@
     "implementing_body": "Ministry of Women and Child Development",
     "launch_year": 2018,
     "scheme_type": "Nutrition mission",
+    "help_type": "Nutrition",
     "status": "active",
     "description": "A mission to improve nutrition among young children, adolescent girls, pregnant women and mothers who are breastfeeding.",
     "coverage_amount": "Supplementary nutrition through Anganwadi centres.",
@@ -702,7 +787,10 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
   },
   {
     "id": "NAM",
@@ -713,6 +801,7 @@
     "implementing_body": "Ministry of AYUSH",
     "launch_year": 2014,
     "scheme_type": "AYUSH services",
+    "help_type": "AYUSH medicine",
     "status": "active",
     "description": "Supports states to offer Ayurveda, Yoga, Unani, Siddha and Homoeopathy services and to improve related education and medicines.",
     "coverage_amount": "Support for facilities and services rather than individual payments.",
@@ -731,6 +820,2316 @@
     "gender": [
       "all"
     ],
-    "income_max_annual": null
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": true,
+    "notes": null
+  },
+  {
+    "id": "AYURGYAN",
+    "name": "Ayurgyan Scheme",
+    "short_name": "Ayurgyan",
+    "category": "AYUSH",
+    "ministry": "Ministry of AYUSH",
+    "implementing_body": "Ministry of AYUSH / State AYUSH Departments",
+    "launch_year": 2021,
+    "scheme_type": "Central Sector Scheme",
+    "help_type": "AYUSH medicine",
+    "status": "active",
+    "description": "Capacity building, training and continuing education in AYUSH.",
+    "coverage_amount": "Training grants",
+    "eligibility": "AYUSH practitioners and institutions.",
+    "target_beneficiaries": "Practitioners",
+    "official_website": "https://ayush.gov.in",
+    "key_features": [
+      "CME programmes",
+      "Workshops"
+    ],
+    "audience": [],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "AYURSWASTHYA",
+    "name": "Ayurswasthya Yojana",
+    "short_name": "Ayurswasthya",
+    "category": "AYUSH",
+    "ministry": "Ministry of AYUSH",
+    "implementing_body": "Ministry of AYUSH / State AYUSH Departments",
+    "launch_year": 2002,
+    "scheme_type": "Central Sector Scheme",
+    "help_type": "AYUSH medicine",
+    "status": "active",
+    "description": "Research and public health outreach in Ayurveda.",
+    "coverage_amount": "Project grants",
+    "eligibility": "AYUSH institutions.",
+    "target_beneficiaries": "Public",
+    "official_website": "https://ayush.gov.in",
+    "key_features": [
+      "Community outreach",
+      "Research"
+    ],
+    "audience": [],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "ESANJEEVANI",
+    "name": "eSanjeevani Telemedicine Service",
+    "short_name": "eSanjeevani",
+    "category": "Digital Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2019,
+    "scheme_type": "Platform",
+    "help_type": "Tele-health & digital records",
+    "status": "active",
+    "description": "Free online doctor consultations.",
+    "coverage_amount": "Free teleconsultation",
+    "eligibility": "Anyone in India.",
+    "target_beneficiaries": "General population",
+    "official_website": "https://esanjeevani.mohfw.gov.in",
+    "key_features": [
+      "Doctor-to-patient and doctor-to-doctor",
+      "ePrescription"
+    ],
+    "audience": [
+      "family",
+      "patient"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "HPR",
+    "name": "Healthcare Professionals Registry (HPR)",
+    "short_name": "HPR",
+    "category": "Digital Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2021,
+    "scheme_type": "Platform under ABDM",
+    "help_type": "Quality & awareness",
+    "status": "active",
+    "description": "Verified national registry of health professionals.",
+    "coverage_amount": "Registry",
+    "eligibility": "Doctors, nurses, pharmacists and other professionals.",
+    "target_beneficiaries": "Health professionals",
+    "official_website": "https://abdm.gov.in",
+    "key_features": [
+      "Single identity",
+      "Interoperable"
+    ],
+    "audience": [],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NHCX",
+    "name": "National Health Claims Exchange",
+    "short_name": "NHCX",
+    "category": "Digital Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2023,
+    "scheme_type": "Platform under ABDM",
+    "help_type": "Tele-health & digital records",
+    "status": "active",
+    "description": "Standardised exchange of health insurance claims data.",
+    "coverage_amount": "Claims interoperability",
+    "eligibility": "Insurers, hospitals and payers.",
+    "target_beneficiaries": "Hospitals and insurers",
+    "official_website": "https://abdm.gov.in",
+    "key_features": [
+      "Faster claim processing",
+      "ABDM-linked"
+    ],
+    "audience": [],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "UWIN",
+    "name": "U-WIN Immunization Platform",
+    "short_name": "U-WIN",
+    "category": "Digital Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2023,
+    "scheme_type": "Platform",
+    "help_type": "Tele-health & digital records",
+    "status": "active",
+    "description": "Digital record of vaccinations for pregnant women and children.",
+    "coverage_amount": "Digital immunization record",
+    "eligibility": "Pregnant women and children.",
+    "target_beneficiaries": "Mothers and children",
+    "official_website": "https://uwin.mohfw.gov.in",
+    "key_features": [
+      "Digital certificate",
+      "Vaccination reminders"
+    ],
+    "audience": [
+      "mother",
+      "child"
+    ],
+    "age_group": [
+      "child",
+      "adult"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "ADIP",
+    "name": "ADIP Scheme (Aids and Appliances for Persons with Disabilities)",
+    "short_name": "ADIP",
+    "category": "Disability & Rehabilitation",
+    "ministry": "Ministry of Social Justice and Empowerment",
+    "implementing_body": "Department of Empowerment of Persons with Disabilities, via ALIMCO, national institutes, NGOs and DDRCs",
+    "launch_year": 1981,
+    "scheme_type": "Central Sector Scheme",
+    "help_type": "Rehabilitation & devices",
+    "status": "active",
+    "description": "Free aids and appliances for persons with disabilities.",
+    "coverage_amount": "Free assistive devices",
+    "eligibility": "Persons with 40%+ disability; income criteria apply.",
+    "target_beneficiaries": "Persons with disabilities",
+    "official_website": "https://depwd.gov.in/en/adip-scheme",
+    "key_features": [
+      "Camps with ALIMCO",
+      "Appliances for all types"
+    ],
+    "audience": [
+      "patient",
+      "senior"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": 360000,
+    "income_note": "Eligibility ceiling ₹30,000 a month (₹22,500 for the 100% subsidy tier, ₹22,501–₹30,000 for the 50% tier). Scheme revised 26 September 2024.",
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "DDRS",
+    "name": "Deendayal Disabled Rehabilitation Scheme",
+    "short_name": "DDRS",
+    "category": "Disability & Rehabilitation",
+    "ministry": "Ministry of Social Justice and Empowerment",
+    "implementing_body": "Department of Empowerment of Persons with Disabilities",
+    "launch_year": 2003,
+    "scheme_type": "Central Sector Scheme",
+    "help_type": "Rehabilitation & devices",
+    "status": "active",
+    "description": "Grants to NGOs for rehabilitation services.",
+    "coverage_amount": "NGO grants",
+    "eligibility": "Disability service organisations.",
+    "target_beneficiaries": "Persons with disabilities",
+    "official_website": "https://depwd.gov.in/en/scheme-of-assistance-to-disabled-persons",
+    "key_features": [
+      "Special schools",
+      "Vocational centres"
+    ],
+    "audience": [
+      "patient"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NATIONALTRUST",
+    "name": "Niramaya Health Insurance Scheme",
+    "short_name": "Niramaya",
+    "category": "Disability & Rehabilitation",
+    "ministry": "Ministry of Social Justice and Empowerment",
+    "implementing_body": "DEPwD / National Trust",
+    "launch_year": 2008,
+    "scheme_type": "Insurance scheme",
+    "help_type": "Health insurance",
+    "status": "active",
+    "description": "Health cover for persons with autism, cerebral palsy, intellectual disability and multiple disabilities.",
+    "coverage_amount": "Up to Rs. 1,00,000 per year",
+    "eligibility": "Persons with listed disabilities; BPL and others on premium.",
+    "target_beneficiaries": "Persons with disabilities",
+    "official_website": "https://thenationaltrust.gov.in",
+    "key_features": [
+      "Pre-existing conditions covered",
+      "Low premium"
+    ],
+    "audience": [
+      "patient",
+      "senior"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": 100000,
+    "income_note": "Cover is free for BPL families; other eligible families pay a small annual contribution.",
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "IDSP",
+    "name": "Integrated Disease Surveillance Programme (IHIP)",
+    "short_name": "IDSP",
+    "category": "Disease Control",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2004,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Screening & prevention",
+    "status": "active",
+    "description": "Disease surveillance and outbreak response.",
+    "coverage_amount": "Surveillance network",
+    "eligibility": "Entire population.",
+    "target_beneficiaries": "General population",
+    "official_website": "https://idsp.mohfw.gov.in",
+    "key_features": [
+      "Outbreak detection",
+      "Digital reporting"
+    ],
+    "audience": [
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NRCP",
+    "name": "National Action Plan for Dog-Mediated Rabies Elimination",
+    "short_name": "NAPRE",
+    "category": "Disease Control",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2021,
+    "scheme_type": "Programme",
+    "help_type": "Free medicines & tests",
+    "status": "active",
+    "description": "Aims to eliminate dog-mediated human rabies.",
+    "coverage_amount": "Free post-exposure prophylaxis at public facilities",
+    "eligibility": "People bitten by dogs and animals.",
+    "target_beneficiaries": "General population",
+    "official_website": "https://ncdc.mohfw.gov.in",
+    "key_features": [
+      "Anti-rabies vaccine",
+      "Mass dog vaccination"
+    ],
+    "audience": [
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NAPSE",
+    "name": "National Action Plan for Prevention and Control of Snakebite Envenoming",
+    "short_name": "NAP-SE",
+    "category": "Disease Control",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2024,
+    "scheme_type": "Programme",
+    "help_type": "Emergency & accident care",
+    "status": "active",
+    "description": "Halves snakebite deaths by 2030.",
+    "coverage_amount": "Antivenom availability and training",
+    "eligibility": "People at risk of snakebite.",
+    "target_beneficiaries": "Rural populations",
+    "official_website": "https://ncdc.mohfw.gov.in",
+    "key_features": [
+      "Antivenom stock",
+      "Health worker training"
+    ],
+    "audience": [
+      "family",
+      "worker"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NCVBDC",
+    "name": "National Centre for Vector Borne Diseases Control",
+    "short_name": "NCVBDC",
+    "category": "Disease Control",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2003,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Screening & prevention",
+    "status": "active",
+    "description": "Prevention and control of malaria, dengue, chikungunya, kala-azar, filariasis and Japanese encephalitis.",
+    "coverage_amount": "Free diagnosis and treatment",
+    "eligibility": "General population in endemic areas.",
+    "target_beneficiaries": "Population at risk",
+    "official_website": "https://ncvbdc.mohfw.gov.in",
+    "key_features": [
+      "Free RDT and drugs",
+      "Vector control"
+    ],
+    "audience": [
+      "family",
+      "patient"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NDD",
+    "name": "National Deworming Day",
+    "short_name": "NDD",
+    "category": "Disease Control",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2015,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Screening & prevention",
+    "status": "active",
+    "description": "Biannual mass deworming to combat intestinal worms.",
+    "coverage_amount": "Free albendazole tablets",
+    "eligibility": "Children and adolescents aged 1-19.",
+    "target_beneficiaries": "Children 1-19",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Given in schools and anganwadis",
+      "Biannual rounds"
+    ],
+    "audience": [
+      "child"
+    ],
+    "age_group": [
+      "child",
+      "adult"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NLEP",
+    "name": "National Leprosy Eradication Programme",
+    "short_name": "NLEP",
+    "category": "Disease Control",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 1983,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Free medicines & tests",
+    "status": "active",
+    "description": "Case detection, treatment and rehabilitation of leprosy patients.",
+    "coverage_amount": "Free MDT treatment and reconstructive surgery support",
+    "eligibility": "All persons affected by leprosy.",
+    "target_beneficiaries": "Persons affected by leprosy",
+    "official_website": "https://nlep.nic.in",
+    "key_features": [
+      "Free multi-drug therapy",
+      "Disability prevention"
+    ],
+    "audience": [
+      "patient"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NPPCF",
+    "name": "National Programme for Prevention and Control of Fluorosis",
+    "short_name": "NPPCF",
+    "category": "Disease Control",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2008,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Screening & prevention",
+    "status": "active",
+    "description": "Surveillance and management of fluorosis in affected districts.",
+    "coverage_amount": "Testing, treatment and awareness",
+    "eligibility": "People in fluoride-affected areas.",
+    "target_beneficiaries": "Rural populations",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Water testing",
+      "Case management"
+    ],
+    "audience": [
+      "family",
+      "child"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NSCAEM",
+    "name": "National Sickle Cell Anaemia Elimination Mission",
+    "short_name": "NSCAEM",
+    "category": "Disease Control",
+    "ministry": "Ministry of Tribal Affairs",
+    "implementing_body": "Ministry of Tribal Affairs / MoHFW",
+    "launch_year": 2023,
+    "scheme_type": "Mission",
+    "help_type": "Screening & prevention",
+    "status": "active",
+    "description": "Screening and management of sickle cell disease in tribal and high-prevalence areas.",
+    "coverage_amount": "Free screening, counselling and treatment",
+    "eligibility": "Persons aged 0-40 in affected districts.",
+    "target_beneficiaries": "Tribal and high-risk populations",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Mass screening",
+      "Genetic counselling"
+    ],
+    "audience": [
+      "child",
+      "patient"
+    ],
+    "age_group": [
+      "child",
+      "adult"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NVHCP",
+    "name": "National Viral Hepatitis Control Programme",
+    "short_name": "NVHCP",
+    "category": "Disease Control",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2018,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Free medicines & tests",
+    "status": "active",
+    "description": "Prevention, testing and free treatment of hepatitis B and C.",
+    "coverage_amount": "Free diagnostics and drugs",
+    "eligibility": "People with hepatitis B/C.",
+    "target_beneficiaries": "Hepatitis patients",
+    "official_website": "https://nvhcp.mohfw.gov.in",
+    "key_features": [
+      "Free treatment",
+      "Vaccination of health workers"
+    ],
+    "audience": [
+      "patient"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NIKSHAY",
+    "name": "Ni-kshay Poshan Yojana",
+    "short_name": "NPY",
+    "category": "Disease Control",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2018,
+    "scheme_type": "Direct Benefit Transfer scheme",
+    "help_type": "Cash assistance",
+    "status": "active",
+    "description": "Nutritional support to TB patients on treatment.",
+    "coverage_amount": "Rs. 1,000 per month (revised upward in 2024) during treatment",
+    "eligibility": "Notified TB patients registered on Ni-kshay.",
+    "target_beneficiaries": "TB patients",
+    "official_website": "https://tbcindia.gov.in",
+    "key_features": [
+      "DBT to bank account",
+      "Paid for duration of treatment"
+    ],
+    "audience": [
+      "patient",
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NIKSHAYMITRA",
+    "name": "Pradhan Mantri TB Mukt Bharat Abhiyaan (Ni-kshay Mitra)",
+    "short_name": "Ni-kshay Mitra",
+    "category": "Disease Control",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2022,
+    "scheme_type": "Community support initiative",
+    "help_type": "Nutrition",
+    "status": "active",
+    "description": "Individuals and organisations adopt TB patients to give nutrition and support.",
+    "coverage_amount": "Food baskets and vocational support",
+    "eligibility": "TB patients on treatment.",
+    "target_beneficiaries": "TB patients",
+    "official_website": "https://tbcindia.gov.in",
+    "key_features": [
+      "Voluntary adoption",
+      "Nutritional and diagnostic support"
+    ],
+    "audience": [
+      "patient",
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "CASHLESSRTA",
+    "name": "Cashless Treatment Scheme for Road Accident Victims",
+    "short_name": "RTA-Cashless",
+    "category": "Emergency & Trauma Care",
+    "ministry": "Ministry of Road Transport and Highways",
+    "implementing_body": "MoRTH / NHA",
+    "launch_year": 2025,
+    "scheme_type": "Scheme",
+    "help_type": "Emergency & accident care",
+    "status": "active",
+    "description": "Cashless treatment of road accident victims at empanelled hospitals.",
+    "coverage_amount": "Up to Rs. 1,50,000 per victim for up to 7 days",
+    "eligibility": "Road accident victims on any road using motor vehicle.",
+    "target_beneficiaries": "Road accident victims",
+    "official_website": "https://morth.nic.in",
+    "key_features": [
+      "Empanelled hospitals",
+      "Police and hospital coordination"
+    ],
+    "audience": [
+      "family",
+      "worker"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "AMBULANCE",
+    "name": "National Ambulance Service (108/102)",
+    "short_name": "NAS",
+    "category": "Emergency & Trauma Care",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2005,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Emergency & accident care",
+    "status": "active",
+    "description": "Emergency and patient transport ambulances.",
+    "coverage_amount": "Free ambulance services",
+    "eligibility": "Pregnant women, sick infants and emergencies.",
+    "target_beneficiaries": "All patients",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Dial 108/102",
+      "GPS-enabled"
+    ],
+    "audience": [
+      "family",
+      "mother",
+      "patient",
+      "senior",
+      "child"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "TRAUMA",
+    "name": "Trauma Care Programme",
+    "short_name": "Trauma Care",
+    "category": "Emergency & Trauma Care",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2009,
+    "scheme_type": "Programme",
+    "help_type": "Emergency & accident care",
+    "status": "active",
+    "description": "Strengthens trauma care on national highways.",
+    "coverage_amount": "Trauma centres at identified facilities",
+    "eligibility": "Road accident and trauma victims.",
+    "target_beneficiaries": "Accident victims",
+    "official_website": "https://mohfw.gov.in",
+    "key_features": [
+      "Trauma centres",
+      "Ambulance link"
+    ],
+    "audience": [
+      "family",
+      "worker"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "ABVKY",
+    "name": "Atal Beemit Vyakti Kalyan Yojana",
+    "short_name": "ABVKY",
+    "category": "Employee / Pensioner Schemes",
+    "ministry": "Ministry of Labour and Employment",
+    "implementing_body": "ESIC / EPFO",
+    "launch_year": 2018,
+    "scheme_type": "ESIC scheme",
+    "help_type": "Cash assistance",
+    "status": "active",
+    "description": "Relief for insured workers who lose their jobs.",
+    "coverage_amount": "Cash relief up to 50% of average wages",
+    "eligibility": "ESIC insured persons who become unemployed.",
+    "target_beneficiaries": "Insured workers",
+    "official_website": "https://esic.gov.in",
+    "key_features": [
+      "Direct transfer",
+      "Limited period"
+    ],
+    "audience": [
+      "worker"
+    ],
+    "age_group": [
+      "adult"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "AYUSHMANCAPF",
+    "name": "Ayushman CAPF",
+    "short_name": "CAPF",
+    "category": "Employee / Pensioner Schemes",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2020,
+    "scheme_type": "Scheme",
+    "help_type": "Health insurance",
+    "status": "active",
+    "description": "PM-JAY style cover for Central Armed Police Forces.",
+    "coverage_amount": "Cashless cover per scheme rules",
+    "eligibility": "CAPF personnel and dependants.",
+    "target_beneficiaries": "CAPF families",
+    "official_website": "https://pmjay.gov.in",
+    "key_features": [
+      "Cashless care",
+      "Empanelled hospitals"
+    ],
+    "audience": [
+      "worker",
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "ECHS",
+    "name": "Ex-Servicemen Contributory Health Scheme",
+    "short_name": "ECHS",
+    "category": "Employee / Pensioner Schemes",
+    "ministry": "Ministry of Defence",
+    "implementing_body": "ECHS / Armed Forces Medical Services",
+    "launch_year": 2003,
+    "scheme_type": "Contributory scheme",
+    "help_type": "Health insurance",
+    "status": "active",
+    "description": "Cashless healthcare for ex-servicemen and dependants.",
+    "coverage_amount": "Cashless treatment at polyclinics and empanelled hospitals",
+    "eligibility": "Ex-servicemen pensioners and dependants.",
+    "target_beneficiaries": "Ex-servicemen",
+    "official_website": "https://echs.gov.in",
+    "key_features": [
+      "Polyclinics",
+      "Referral to empanelled hospitals"
+    ],
+    "audience": [
+      "worker",
+      "senior",
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "PMJAY-VVC",
+    "name": "Ayushman Vay Vandana (PM-JAY for 70+)",
+    "short_name": "Vay Vandana",
+    "category": "Health Insurance / Financial Protection",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2024,
+    "scheme_type": "Extension of PM-JAY",
+    "help_type": "Health insurance",
+    "status": "active",
+    "description": "Health cover for all senior citizens aged 70+ irrespective of income.",
+    "coverage_amount": "Rs. 5,00,000 per family per year (shared top-up for families already covered)",
+    "eligibility": "Indian citizens aged 70 years and above.",
+    "target_beneficiaries": "Senior citizens 70+",
+    "official_website": "https://pmjay.gov.in",
+    "key_features": [
+      "Cashless treatment at empanelled hospitals",
+      "Vay Vandana card",
+      "No income test"
+    ],
+    "audience": [
+      "senior",
+      "family"
+    ],
+    "age_group": [
+      "senior70"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "HMDG",
+    "name": "Health Minister's Discretionary Grant",
+    "short_name": "HMDG",
+    "category": "Health Insurance / Financial Protection",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 1997,
+    "scheme_type": "Central assistance",
+    "help_type": "Cash assistance",
+    "status": "active",
+    "description": "One-time grant for treatment of major life-threatening diseases.",
+    "coverage_amount": "Up to Rs. 1,50,000 for treatment in government hospitals (as per guidelines)",
+    "eligibility": "BPL patients with major illness treated in government hospitals; family income limit per scheme rules.",
+    "target_beneficiaries": "Poor patients",
+    "official_website": "https://rashtriyaarogyanidhi.nic.in",
+    "key_features": [
+      "Applies via hospital",
+      "Budget cap per patient"
+    ],
+    "audience": [
+      "patient",
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": 100000,
+    "income_note": "The test is BPL status, set by a committee per case. ₹1,00,000 a year approximates the BPL threshold.",
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "PMJJBY",
+    "name": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+    "short_name": "PMJJBY",
+    "category": "Health Insurance / Financial Protection",
+    "ministry": "Ministry of Finance",
+    "implementing_body": "Public sector insurers / banks",
+    "launch_year": 2015,
+    "scheme_type": "Insurance scheme",
+    "help_type": "Health insurance",
+    "status": "active",
+    "description": "Life insurance cover for death due to any reason.",
+    "coverage_amount": "Rs. 2 lakh",
+    "eligibility": "Bank account holders aged 18-50.",
+    "target_beneficiaries": "Account holders",
+    "official_website": "https://jansuraksha.gov.in",
+    "key_features": [
+      "Annual premium",
+      "Auto-debit"
+    ],
+    "audience": [
+      "worker",
+      "family"
+    ],
+    "age_group": [
+      "adult"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "PMSBY",
+    "name": "Pradhan Mantri Suraksha Bima Yojana",
+    "short_name": "PMSBY",
+    "category": "Health Insurance / Financial Protection",
+    "ministry": "Ministry of Finance",
+    "implementing_body": "Public sector insurers / banks",
+    "launch_year": 2015,
+    "scheme_type": "Insurance scheme",
+    "help_type": "Health insurance",
+    "status": "active",
+    "description": "Accident insurance for death and disability.",
+    "coverage_amount": "Rs. 2 lakh for death/total disability; Rs. 1 lakh partial",
+    "eligibility": "Bank account holders aged 18-70.",
+    "target_beneficiaries": "Account holders",
+    "official_website": "https://jansuraksha.gov.in",
+    "key_features": [
+      "Annual low premium",
+      "Auto-debit"
+    ],
+    "audience": [
+      "worker",
+      "family"
+    ],
+    "age_group": [
+      "adult",
+      "senior"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "EATRIGHT",
+    "name": "Eat Right India",
+    "short_name": "Eat Right",
+    "category": "Health Promotion & Quality",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2018,
+    "scheme_type": "Movement",
+    "help_type": "Quality & awareness",
+    "status": "active",
+    "description": "Safe and healthy food for all.",
+    "coverage_amount": "Awareness and certification",
+    "eligibility": "General public and food businesses.",
+    "target_beneficiaries": "General public",
+    "official_website": "https://fssai.gov.in",
+    "key_features": [
+      "Safe food",
+      "Healthy diets"
+    ],
+    "audience": [
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "FITINDIA",
+    "name": "Fit India Movement",
+    "short_name": "Fit India",
+    "category": "Health Promotion & Quality",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2019,
+    "scheme_type": "Movement",
+    "help_type": "Quality & awareness",
+    "status": "active",
+    "description": "Promotes physical fitness and healthy lifestyle.",
+    "coverage_amount": "Awareness and events",
+    "eligibility": "All age groups.",
+    "target_beneficiaries": "General public",
+    "official_website": "https://fitindia.gov.in",
+    "key_features": [
+      "Fit India Quiz",
+      "Schools and communities"
+    ],
+    "audience": [
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "KAYAKALP",
+    "name": "Kayakalp Award Scheme",
+    "short_name": "Kayakalp",
+    "category": "Health Promotion & Quality",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2015,
+    "scheme_type": "Initiative",
+    "help_type": "Quality & awareness",
+    "status": "active",
+    "description": "Rewards cleanliness and hygiene in public health facilities.",
+    "coverage_amount": "Cash awards to facilities",
+    "eligibility": "Public health facilities.",
+    "target_beneficiaries": "Public health facilities",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Annual award",
+      "Infection control"
+    ],
+    "audience": [],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "MERAASPATAAL",
+    "name": "Mera Aspataal (Patient Feedback)",
+    "short_name": "Mera Aspataal",
+    "category": "Health Promotion & Quality",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2016,
+    "scheme_type": "Platform",
+    "help_type": "Quality & awareness",
+    "status": "active",
+    "description": "Collects patient feedback on public facility services.",
+    "coverage_amount": "Feedback system",
+    "eligibility": "Patients of public hospitals.",
+    "target_beneficiaries": "Patients",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "SMS and app feedback"
+    ],
+    "audience": [
+      "patient",
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "SHWP",
+    "name": "School Health and Wellness Programme",
+    "short_name": "SHWP",
+    "category": "Health Promotion & Quality",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2020,
+    "scheme_type": "Programme under Ayushman Bharat",
+    "help_type": "Quality & awareness",
+    "status": "active",
+    "description": "Health promotion through school wellness ambassadors.",
+    "coverage_amount": "Weekly wellness sessions",
+    "eligibility": "Students Class VI-XII.",
+    "target_beneficiaries": "School children",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Health ambassadors",
+      "Mental well-being modules"
+    ],
+    "audience": [
+      "child"
+    ],
+    "age_group": [
+      "child"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "SSS",
+    "name": "Swachh Swasth Sarvatra",
+    "short_name": "SSS",
+    "category": "Health Promotion & Quality",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2016,
+    "scheme_type": "Initiative",
+    "help_type": "Quality & awareness",
+    "status": "active",
+    "description": "Integrates sanitation with health through Gram Panchayat support.",
+    "coverage_amount": "Support for ODF-plus villages and health infrastructure",
+    "eligibility": "Community health centres and Gram Panchayats.",
+    "target_beneficiaries": "Rural communities",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Joint sanitation and health work"
+    ],
+    "audience": [
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "AMB",
+    "name": "Anemia Mukt Bharat",
+    "short_name": "AMB",
+    "category": "Maternal & Child Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2018,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Nutrition",
+    "status": "active",
+    "description": "6x6x6 strategy to reduce anaemia across life stages.",
+    "coverage_amount": "Free IFA supplements, testing and treatment",
+    "eligibility": "Children, adolescents, pregnant and lactating women, women of reproductive age.",
+    "target_beneficiaries": "Children, adolescents, women",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Prophylactic IFA",
+      "Testing and treatment",
+      "Behaviour change"
+    ],
+    "audience": [
+      "mother",
+      "child"
+    ],
+    "age_group": [
+      "child",
+      "adult"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "HBNC",
+    "name": "Home Based Newborn Care (HBNC/HBYC)",
+    "short_name": "HBNC",
+    "category": "Maternal & Child Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2011,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Primary care & hospitals",
+    "status": "active",
+    "description": "ASHA home visits for newborns and young children.",
+    "coverage_amount": "Home visits and counselling",
+    "eligibility": "Newborns and children up to 15 months.",
+    "target_beneficiaries": "Newborns and infants",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "ASHA home visits",
+      "Danger sign detection",
+      "Referral"
+    ],
+    "audience": [
+      "child",
+      "mother"
+    ],
+    "age_group": [
+      "child"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "LAQSHYA",
+    "name": "LaQshya (Labour Room Quality Improvement)",
+    "short_name": "LaQshya",
+    "category": "Maternal & Child Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2017,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Quality & awareness",
+    "status": "active",
+    "description": "Improves quality of care in labour rooms and maternity operation theatres.",
+    "coverage_amount": "Quality certification and facility strengthening",
+    "eligibility": "Public health facilities (medical colleges, district hospitals, FRUs).",
+    "target_beneficiaries": "Pregnant women and newborns",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Respectful maternity care",
+      "Quality standards",
+      "Staff training"
+    ],
+    "audience": [
+      "mother",
+      "child"
+    ],
+    "age_group": [
+      "child",
+      "adult"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "MAA",
+    "name": "MAA (Mothers' Absolute Affection)",
+    "short_name": "MAA",
+    "category": "Maternal & Child Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2016,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Nutrition",
+    "status": "active",
+    "description": "Promotes breastfeeding and support for lactating mothers.",
+    "coverage_amount": "Counselling and community awareness",
+    "eligibility": "All lactating mothers and families.",
+    "target_beneficiaries": "Mothers and infants",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Early initiation of breastfeeding",
+      "Exclusive breastfeeding for 6 months"
+    ],
+    "audience": [
+      "mother",
+      "child"
+    ],
+    "age_group": [
+      "child",
+      "adult"
+    ],
+    "gender": [
+      "female"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "MHS",
+    "name": "Menstrual Hygiene Scheme",
+    "short_name": "MHS",
+    "category": "Maternal & Child Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2011,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Nutrition",
+    "status": "active",
+    "description": "Subsidised sanitary napkins for adolescent girls.",
+    "coverage_amount": "Napkins at low cost via ASHAs",
+    "eligibility": "Adolescent girls in rural areas.",
+    "target_beneficiaries": "Adolescent girls",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "ASHA distribution",
+      "Awareness"
+    ],
+    "audience": [
+      "mother",
+      "child"
+    ],
+    "age_group": [
+      "child",
+      "adult"
+    ],
+    "gender": [
+      "female"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "MPV",
+    "name": "Mission Parivar Vikas",
+    "short_name": "MPV",
+    "category": "Maternal & Child Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2016,
+    "scheme_type": "Mission",
+    "help_type": "Free medicines & tests",
+    "status": "active",
+    "description": "Family planning services in high-fertility districts.",
+    "coverage_amount": "Contraceptives and counselling",
+    "eligibility": "Couples in selected districts.",
+    "target_beneficiaries": "Couples",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Antara injectable",
+      "Home delivery of contraceptives"
+    ],
+    "audience": [
+      "mother"
+    ],
+    "age_group": [
+      "adult"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NSSK",
+    "name": "Navjaat Shishu Suraksha Karyakram (NSSK)",
+    "short_name": "NSSK",
+    "category": "Maternal & Child Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2009,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Quality & awareness",
+    "status": "active",
+    "description": "Trains birth attendants in basic newborn care and resuscitation.",
+    "coverage_amount": "Training programme",
+    "eligibility": "Health workers at delivery points.",
+    "target_beneficiaries": "Newborns",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Basic resuscitation",
+      "Prevents birth asphyxia"
+    ],
+    "audience": [
+      "mother",
+      "child"
+    ],
+    "age_group": [
+      "child",
+      "adult"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "PMMVY",
+    "name": "Pradhan Mantri Matru Vandana Yojana (PMMVY)",
+    "short_name": "PMMVY",
+    "category": "Maternal & Child Health",
+    "ministry": "Ministry of Women and Child Development",
+    "implementing_body": "MoWCD / State Governments",
+    "launch_year": 2017,
+    "scheme_type": "Centrally Sponsored Scheme",
+    "help_type": "Cash assistance",
+    "status": "active",
+    "description": "Cash incentive for wage loss and nutrition during pregnancy and lactation.",
+    "coverage_amount": "Rs. 5,000 in instalments for first child (higher for second child if a girl)",
+    "eligibility": "Pregnant and lactating women, 19+, per scheme rules; excludes regular government employees.",
+    "target_beneficiaries": "Pregnant and lactating women",
+    "official_website": "https://wcd.gov.in",
+    "key_features": [
+      "Direct benefit transfer",
+      "Registration at anganwadi"
+    ],
+    "audience": [
+      "mother"
+    ],
+    "age_group": [
+      "adult"
+    ],
+    "gender": [
+      "female"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "RKSK",
+    "name": "Rashtriya Kishor Swasthya Karyakram (RKSK)",
+    "short_name": "RKSK",
+    "category": "Maternal & Child Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2014,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Screening & prevention",
+    "status": "active",
+    "description": "Adolescent health: nutrition, sexual and reproductive health, mental health, substance misuse.",
+    "coverage_amount": "Counselling, clinics and peer education",
+    "eligibility": "Adolescents aged 10-19.",
+    "target_beneficiaries": "Adolescents",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Adolescent Friendly Health Clinics",
+      "Peer educators",
+      "Weekly iron-folic acid"
+    ],
+    "audience": [
+      "child"
+    ],
+    "age_group": [
+      "child",
+      "adult"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "SNCU",
+    "name": "Special Newborn Care Units (SNCU/NBSU)",
+    "short_name": "SNCU",
+    "category": "Maternal & Child Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2007,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Primary care & hospitals",
+    "status": "active",
+    "description": "Facility-based care for sick and low-birth-weight newborns.",
+    "coverage_amount": "Free care at district facilities",
+    "eligibility": "Sick newborns referred to public facilities.",
+    "target_beneficiaries": "Newborns",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "SNCU at districts",
+      "Newborn stabilisation units"
+    ],
+    "audience": [
+      "child"
+    ],
+    "age_group": [
+      "child"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "SUMAN",
+    "name": "Surakshit Matritva Aashwasan (SUMAN)",
+    "short_name": "SUMAN",
+    "category": "Maternal & Child Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2019,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Primary care & hospitals",
+    "status": "active",
+    "description": "Assured, respectful, zero-expense care for pregnant women and newborns.",
+    "coverage_amount": "Free services, drugs, diagnostics, transport and blood",
+    "eligibility": "All pregnant women, mothers up to 6 months and sick newborns visiting public facilities.",
+    "target_beneficiaries": "Pregnant women, mothers, newborns",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Zero-expense delivery",
+      "Free referral transport",
+      "Grievance helpline"
+    ],
+    "audience": [
+      "mother",
+      "child"
+    ],
+    "age_group": [
+      "child",
+      "adult"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "WIFS",
+    "name": "Weekly Iron and Folic Acid Supplementation (WIFS)",
+    "short_name": "WIFS",
+    "category": "Maternal & Child Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2012,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Nutrition",
+    "status": "active",
+    "description": "Weekly IFA tablets to reduce anaemia in adolescents.",
+    "coverage_amount": "Free IFA tablets",
+    "eligibility": "School-going and out-of-school adolescents 10-19.",
+    "target_beneficiaries": "Adolescents",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Weekly supervised IFA",
+      "Biannual deworming",
+      "Nutrition education"
+    ],
+    "audience": [
+      "child"
+    ],
+    "age_group": [
+      "child",
+      "adult"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "AMRIT",
+    "name": "AMRIT Pharmacies",
+    "short_name": "AMRIT",
+    "category": "Medicine Access",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2015,
+    "scheme_type": "Initiative",
+    "help_type": "Free medicines & tests",
+    "status": "active",
+    "description": "Discounted drugs, cardiac stents and implants.",
+    "coverage_amount": "Medicines at significant discounts",
+    "eligibility": "General public.",
+    "target_beneficiaries": "All patients",
+    "official_website": "https://www.lifecarehll.com/",
+    "key_features": [
+      "Outlets inside hospitals",
+      "Reliable implants"
+    ],
+    "audience": [
+      "family",
+      "patient",
+      "senior"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal. Run by HLL Lifecare Ltd, a Government of India public-sector enterprise and the official nodal agency for AMRIT."
+  },
+  {
+    "id": "FDI",
+    "name": "Free Diagnostics Service Initiative",
+    "short_name": "FDSI-Diag",
+    "category": "Medicine Access",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2015,
+    "scheme_type": "Initiative under NHM",
+    "help_type": "Free medicines & tests",
+    "status": "active",
+    "description": "Free diagnostic tests at public facilities.",
+    "coverage_amount": "Free pathology and radiology tests",
+    "eligibility": "All patients at public facilities.",
+    "target_beneficiaries": "All patients",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Tele-radiology",
+      "Pathology tests"
+    ],
+    "audience": [
+      "patient",
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "FDSI",
+    "name": "Free Drugs Service Initiative",
+    "short_name": "FDSI",
+    "category": "Medicine Access",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2015,
+    "scheme_type": "Initiative under NHM",
+    "help_type": "Free medicines & tests",
+    "status": "active",
+    "description": "Free essential drugs at public health facilities.",
+    "coverage_amount": "Free medicines",
+    "eligibility": "All patients at public facilities.",
+    "target_beneficiaries": "All patients",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Essential medicine lists",
+      "Central procurement"
+    ],
+    "audience": [
+      "patient",
+      "family",
+      "senior"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "DMHP",
+    "name": "District Mental Health Programme",
+    "short_name": "DMHP",
+    "category": "Mental Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 1996,
+    "scheme_type": "Programme under NMHP",
+    "help_type": "Mental health support",
+    "status": "active",
+    "description": "Mental health services at district level.",
+    "coverage_amount": "Outpatient care, counselling and outreach",
+    "eligibility": "People with mental disorders.",
+    "target_beneficiaries": "Persons with mental illness",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Suicide prevention",
+      "Community outreach"
+    ],
+    "audience": [
+      "patient"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "KIRAN",
+    "name": "KIRAN Mental Health Rehabilitation Helpline",
+    "short_name": "KIRAN",
+    "category": "Mental Health",
+    "ministry": "Ministry of Social Justice and Empowerment",
+    "implementing_body": "Department of Empowerment of Persons with Disabilities, coordinated by NIEPMD Chennai and NIMHR Sehore",
+    "launch_year": 2020,
+    "scheme_type": "Helpline",
+    "help_type": "Mental health support",
+    "status": "active",
+    "description": "Toll-free 24x7 helpline 1800-599-0019 for stress, anxiety and depression.",
+    "coverage_amount": "Free counselling",
+    "eligibility": "Anyone needing support.",
+    "target_beneficiaries": "General population",
+    "official_website": "https://depwd.gov.in/en/others-helplines/",
+    "key_features": [
+      "24x7 toll-free",
+      "13 languages"
+    ],
+    "audience": [
+      "patient",
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "TELEMANAS",
+    "name": "Tele-MANAS (National Tele Mental Health Programme)",
+    "short_name": "Tele-MANAS",
+    "category": "Mental Health",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2022,
+    "scheme_type": "Programme",
+    "help_type": "Mental health support",
+    "status": "active",
+    "description": "24x7 free mental-health counselling by phone (helpline 14416).",
+    "coverage_amount": "Free tele-counselling",
+    "eligibility": "Anyone needing mental-health support.",
+    "target_beneficiaries": "General population",
+    "official_website": "https://telemanas.mohfw.gov.in",
+    "key_features": [
+      "Toll-free 14416 or 1800-891-4416",
+      "Multiple languages"
+    ],
+    "audience": [
+      "patient",
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NOHP",
+    "name": "National Oral Health Programme",
+    "short_name": "NOHP",
+    "category": "Non-Communicable Disease Care",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2014,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Primary care & hospitals",
+    "status": "active",
+    "description": "Oral health promotion and care at public facilities.",
+    "coverage_amount": "Dental care at CHC/district level",
+    "eligibility": "General population.",
+    "target_beneficiaries": "General population",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Dental units",
+      "School oral screening"
+    ],
+    "audience": [
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NPCBVI",
+    "name": "National Programme for Control of Blindness and Visual Impairment",
+    "short_name": "NPCBVI",
+    "category": "Non-Communicable Disease Care",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 1976,
+    "scheme_type": "Centrally Sponsored Scheme",
+    "help_type": "Primary care & hospitals",
+    "status": "active",
+    "description": "Cataract surgeries, eye care and spectacles.",
+    "coverage_amount": "Free cataract surgery and school eye screening",
+    "eligibility": "People with cataract or other eye disease.",
+    "target_beneficiaries": "Persons with visual impairment",
+    "official_website": "https://npcb.nic.in",
+    "key_features": [
+      "Free cataract surgery",
+      "Free spectacles for schoolchildren"
+    ],
+    "audience": [
+      "patient",
+      "senior",
+      "child"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NPHCE",
+    "name": "National Programme for Health Care of the Elderly",
+    "short_name": "NPHCE",
+    "category": "Non-Communicable Disease Care",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2010,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Primary care & hospitals",
+    "status": "active",
+    "description": "Geriatric care at district hospitals and below.",
+    "coverage_amount": "Geriatric clinics and rehabilitation",
+    "eligibility": "Persons aged 60 and above.",
+    "target_beneficiaries": "Senior citizens",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "District geriatric units",
+      "Home-based care"
+    ],
+    "audience": [
+      "senior",
+      "patient"
+    ],
+    "age_group": [
+      "senior"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NPPC",
+    "name": "National Programme for Palliative Care",
+    "short_name": "NPPC",
+    "category": "Non-Communicable Disease Care",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2012,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Primary care & hospitals",
+    "status": "active",
+    "description": "Palliative services for patients with serious illness.",
+    "coverage_amount": "Care at district hospitals and HWCs",
+    "eligibility": "Patients needing palliative care.",
+    "target_beneficiaries": "Patients with life-limiting illness",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Pain relief",
+      "Home-based palliative care"
+    ],
+    "audience": [
+      "patient",
+      "senior"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NPPCD",
+    "name": "National Programme for Prevention and Control of Deafness",
+    "short_name": "NPPCD",
+    "category": "Non-Communicable Disease Care",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2006,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Rehabilitation & devices",
+    "status": "active",
+    "description": "Early detection and management of hearing loss.",
+    "coverage_amount": "Screening, hearing aids and cochlear support where applicable",
+    "eligibility": "Persons with hearing impairment.",
+    "target_beneficiaries": "Persons with hearing loss",
+    "official_website": "https://nhm.gov.in",
+    "key_features": [
+      "Early screening",
+      "Rehabilitation"
+    ],
+    "audience": [
+      "patient",
+      "child",
+      "senior"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NPNCD",
+    "name": "National Programme for Prevention and Control of NCDs (NP-NCD)",
+    "short_name": "NP-NCD",
+    "category": "Non-Communicable Disease Care",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2010,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Screening & prevention",
+    "status": "active",
+    "description": "Screening and management of diabetes, hypertension, cardiovascular disease, stroke and common cancers.",
+    "coverage_amount": "Population-based screening and care at HWCs",
+    "eligibility": "Adults aged 30 and above.",
+    "target_beneficiaries": "Adults 30+",
+    "official_website": "https://ncdc.mohfw.gov.in",
+    "key_features": [
+      "Screening at Ayushman Arogya Mandirs",
+      "NCD clinics"
+    ],
+    "audience": [
+      "patient",
+      "senior",
+      "family"
+    ],
+    "age_group": [
+      "adult",
+      "senior"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NTCP",
+    "name": "National Tobacco Control Programme",
+    "short_name": "NTCP",
+    "category": "Non-Communicable Disease Care",
+    "ministry": "Ministry of Health and Family Welfare",
+    "implementing_body": "MoHFW / State Health Departments",
+    "launch_year": 2007,
+    "scheme_type": "Programme under NHM",
+    "help_type": "Screening & prevention",
+    "status": "active",
+    "description": "Awareness, enforcement of COTPA and tobacco cessation.",
+    "coverage_amount": "Cessation services and awareness",
+    "eligibility": "General public, schools and workplaces.",
+    "target_beneficiaries": "Tobacco users and youth",
+    "official_website": "https://ntcp.mohfw.gov.in",
+    "key_features": [
+      "Tobacco cessation centres",
+      "Tobacco-free educational institutions"
+    ],
+    "audience": [
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "SAKSHAMANG",
+    "name": "Anganwadi Services (ICDS)",
+    "short_name": "ICDS",
+    "category": "Nutrition",
+    "ministry": "Ministry of Women and Child Development",
+    "implementing_body": "MoWCD / State Governments",
+    "launch_year": 1975,
+    "scheme_type": "Centrally Sponsored Scheme",
+    "help_type": "Nutrition",
+    "status": "active",
+    "description": "Integrated nutrition, immunization and early education for children and mothers.",
+    "coverage_amount": "Supplementary nutrition, health check-ups, pre-school education",
+    "eligibility": "Children 0-6, pregnant and lactating women, adolescent girls.",
+    "target_beneficiaries": "Children and mothers",
+    "official_website": "https://wcd.gov.in",
+    "key_features": [
+      "Take-home ration",
+      "Growth monitoring"
+    ],
+    "audience": [
+      "child",
+      "mother"
+    ],
+    "age_group": [
+      "child",
+      "adult"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "FORTRICE",
+    "name": "Fortified Rice Distribution",
+    "short_name": "Fortified Rice",
+    "category": "Nutrition",
+    "ministry": "Ministry of Women and Child Development",
+    "implementing_body": "MoWCD / State Governments",
+    "launch_year": 2022,
+    "scheme_type": "Initiative",
+    "help_type": "Nutrition",
+    "status": "active",
+    "description": "Supplies iron, folic acid and B12 fortified rice through PDS and welfare schemes.",
+    "coverage_amount": "Fortified rice via PDS, ICDS and PM POSHAN",
+    "eligibility": "Households covered by food schemes.",
+    "target_beneficiaries": "Low-income households",
+    "official_website": "https://dfpd.gov.in",
+    "key_features": [
+      "Anaemia reduction",
+      "Nationwide rollout"
+    ],
+    "audience": [
+      "family",
+      "child",
+      "mother"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": 120000,
+    "income_note": "Delivered through PDS, ICDS and PM POSHAN, so it follows the NFSA ceiling.",
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "NFSA",
+    "name": "National Food Security Act 2013",
+    "short_name": "NFSA",
+    "category": "Nutrition",
+    "ministry": "Ministry of Tribal Affairs",
+    "implementing_body": "Ministry of Tribal Affairs / MoHFW",
+    "launch_year": 2013,
+    "scheme_type": "Legal entitlement",
+    "help_type": "Nutrition",
+    "status": "active",
+    "description": "Subsidised foodgrains to eligible households.",
+    "coverage_amount": "5 kg per person per month at subsidised or free rates",
+    "eligibility": "Priority households and AAY families.",
+    "target_beneficiaries": "Low-income households",
+    "official_website": "https://nfsa.gov.in",
+    "key_features": [
+      "Ration cards",
+      "One Nation One Ration Card"
+    ],
+    "audience": [
+      "family"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": 120000,
+    "income_note": "Priority Households have no member earning above ₹10,000 a month. Antyodaya Anna Yojana households are selected by States on Central criteria — there is no national AAY income figure.",
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
+  },
+  {
+    "id": "POSHANTRACKER",
+    "name": "Poshan Tracker",
+    "short_name": "Poshan Tracker",
+    "category": "Nutrition",
+    "ministry": "Ministry of Women and Child Development",
+    "implementing_body": "MoWCD / State Governments",
+    "launch_year": 2021,
+    "scheme_type": "Platform",
+    "help_type": "Nutrition",
+    "status": "active",
+    "description": "App for real-time monitoring of nutrition services.",
+    "coverage_amount": "Digital tracking",
+    "eligibility": "Anganwadi workers and beneficiaries.",
+    "target_beneficiaries": "Children and mothers",
+    "official_website": "https://poshantracker.in",
+    "key_features": [
+      "Growth monitoring",
+      "Real-time data"
+    ],
+    "audience": [
+      "child",
+      "mother"
+    ],
+    "age_group": [
+      "child"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal. poshantracker.in is the official Ministry of Women and Child Development dashboard (built on NeGD/MeitY)."
+  },
+  {
+    "id": "PMJANMAN",
+    "name": "PM-JANMAN (PVTG Mission)",
+    "short_name": "PM-JANMAN",
+    "category": "Tribal & Rural Health",
+    "ministry": "Ministry of Tribal Affairs",
+    "implementing_body": "Ministry of Tribal Affairs / MoHFW",
+    "launch_year": 2023,
+    "scheme_type": "Mission",
+    "help_type": "Primary care & hospitals",
+    "status": "active",
+    "description": "Health, housing and infrastructure for Particularly Vulnerable Tribal Groups.",
+    "coverage_amount": "Mobile medical units and health facilities",
+    "eligibility": "PVTG households in notified habitations.",
+    "target_beneficiaries": "PVTG communities",
+    "official_website": "https://tribal.nic.in",
+    "key_features": [
+      "Mobile medical units",
+      "Sickle cell screening"
+    ],
+    "audience": [
+      "family",
+      "child",
+      "mother",
+      "senior",
+      "patient"
+    ],
+    "age_group": [
+      "all"
+    ],
+    "gender": [
+      "all"
+    ],
+    "income_max_annual": null,
+    "income_note": null,
+    "verified": false,
+    "notes": "Confirm amounts, eligibility and website on the official portal."
   }
 ]

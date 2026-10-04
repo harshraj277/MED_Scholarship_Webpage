@@ -10,6 +10,7 @@
   --navy:#0e2a55; --navy-deep:#081c3d; --gold:#c79b2b; --gold-soft:#f0dc9c;
   --bg:#f4f6fa; --surface:#ffffff; --ink:#14213d; --muted:#4d5b75; --line:#d9e0ec;
   --ok:#17694f; --ok-bg:#dff2ea; --legacy:#6b5a2a; --legacy-bg:#f3ead0;
+  --warn:#9a3412; --warn-bg:#fdeadd;
   --focus:#1a5fd0; --chip:#e8edf6;
 
   /* Text-size scale; set at runtime by the A+ button (app.js). */

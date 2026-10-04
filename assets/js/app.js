@@ -23,9 +23,11 @@
     ['senior', 'Seniors (60+)'],
     ['senior70', 'Seniors 70+']
   ];
-  var PAGE_SIZE = 6;
+  var PAGE_SIZE = 9;
 
-  /* Accent colour per scheme category (cards get a colored top bar) */
+  /* Accent colour per scheme category (cards get a colored top bar).
+     Keep in sync with the `category` values in assets/data/schemes.json –
+     an unmapped category silently falls back to flat navy. */
   var CAT_COLORS = {
     "Health Insurance / Financial Protection": "#2e7d63",
     "Health Infrastructure": "#1a5fd0",
@@ -37,7 +39,12 @@
     "Digital Health": "#5b6f96",
     "Mental Health": "#8a63b8",
     "Nutrition": "#4d7c0f",
-    "AYUSH": "#a16207"
+    "AYUSH": "#a16207",
+    "Non-Communicable Disease Care": "#9d174d",
+    "Disability & Rehabilitation": "#7c2d12",
+    "Emergency & Trauma Care": "#b91c1c",
+    "Health Promotion & Quality": "#15803d",
+    "Tribal & Rural Health": "#4338ca"
   };
 
   var DATA = [];   // loaded from schemes.json
@@ -82,9 +89,24 @@
   function ageLabel(k){ return {all:'All ages', child:'Children (0–17)', adult:'Adults (18–59)', senior:'Seniors (60+)', senior70:'Seniors 70+'}[k] || k; }
   function genderLabel(k){ return {all:'All genders', female:'Women', male:'Men'}[k] || k; }
   function rs(n){ return n.toLocaleString('en-IN'); }
+  /* Three distinct states, so the income filter never overclaims:
+       capped        – an official rupee ceiling we can filter on
+       approx        – a rupee ceiling that stands in for a list-based test
+                       (BPL / SECC), so it is a guide rather than the rule
+       untested      – genuinely no income test                              */
   function incomeLimitText(s){
-    if (s.income_max_annual == null) return 'No income limit.';
-    return 'Up to ₹' + rs(s.income_max_annual) + ' per year.';
+    if (s.income_max_annual == null) return 'No income test.';
+    return 'Up to ₹' + rs(s.income_max_annual) + ' per year' +
+      (s.income_note ? ' (approximate)' : '') + '.';
+  }
+  function incomeNoteText(s){
+    return s.income_note ? '<p class="fine">' + esc(s.income_note) + '</p>' : '';
+  }
+  /* Count how many of the current matches are shown on an approximation. */
+  function approxCount(r){
+    var n = 0;
+    for (var i = 0; i < r.length; i++) if (r[i].income_max_annual != null && r[i].income_note) n++;
+    return n;
   }
   function activeFilters(){
     var n = 0;
@@ -125,22 +147,27 @@
   function populateCategories(){
     cats = [];
     DATA.forEach(function(s){ if (cats.indexOf(s.category) < 0) cats.push(s.category); });
-    $('cat').innerHTML = '<option value="">All types</option>' +
+    $('cat').innerHTML = '<option value="">All categories</option>' +
       cats.map(function(c){ return '<option>' + esc(c) + '</option>'; }).join('');
     $('age').innerHTML = AGE_GROUPS.map(function(a){
       return '<option value="' + a[0] + '">' + esc(a[1]) + '</option>';
     }).join('');
-    var mins = [], types = [];
+    /* "Kind of scheme" is driven by the curated help_type field, not the raw
+       scheme_type (which is implementation plumbing like "Programme under NHM"). */
+    var mins = [], types = [], counts = {};
     DATA.forEach(function(s){
       if (s.ministry && mins.indexOf(s.ministry) < 0) mins.push(s.ministry);
-      if (s.scheme_type && types.indexOf(s.scheme_type) < 0) types.push(s.scheme_type);
+      if (s.help_type){
+        if (types.indexOf(s.help_type) < 0) types.push(s.help_type);
+        counts[s.help_type] = (counts[s.help_type] || 0) + 1;
+      }
     });
     mins.sort(function(a, b){ return a.localeCompare(b); });
     types.sort(function(a, b){ return a.localeCompare(b); });
     $('min').innerHTML = '<option value="">All ministries</option>' +
       mins.map(function(m){ return '<option>' + esc(m) + '</option>'; }).join('');
-    $('type').innerHTML = '<option value="">All scheme types</option>' +
-      types.map(function(t){ return '<option>' + esc(t) + '</option>'; }).join('');
+    $('type').innerHTML = '<option value="">All kinds</option>' +
+      types.map(function(t){ return '<option>' + esc(t) + ' (' + counts[t] + ')</option>'; }).join('');
   }
 
   function chips(){
@@ -163,12 +190,12 @@
     var q = st.q.trim().toLowerCase();
     var r = DATA.filter(function(s){
       if (st.onlySaved && st.saved.indexOf(s.id) < 0) return false;
-      if (st.aud && s.audience.indexOf(st.aud) < 0) return false;
+      if (st.aud && (s.audience || []).indexOf(st.aud) < 0) return false;
       if (st.cat && s.category !== st.cat) return false;
       if (st.age && (s.age_group || []).indexOf('all') < 0 && (s.age_group || []).indexOf(st.age) < 0) return false;
       if (st.gender && (s.gender || ['all']).indexOf('all') < 0 && (s.gender || ['all']).indexOf(st.gender) < 0) return false;
       if (st.min && s.ministry !== st.min) return false;
-      if (st.type && s.scheme_type !== st.type) return false;
+      if (st.type && s.help_type !== st.type) return false;
       if (st.income && s.income_max_annual != null){
         var annual = parseFloat(st.income) * 12;
         if (isFinite(annual) && annual > s.income_max_annual) return false;
@@ -177,15 +204,17 @@
       if (st.stat === 'legacy' && !isLegacy(s)) return false;
       if (q){
         var hay = (s.name + ' ' + s.short_name + ' ' + s.description + ' ' + s.category +
-                   ' ' + s.key_features.join(' ') + ' ' + s.target_beneficiaries).toLowerCase();
+                   ' ' + s.help_type + ' ' + s.key_features.join(' ') + ' ' +
+                   s.target_beneficiaries).toLowerCase();
         if (hay.indexOf(q) < 0) return false;
       }
       return true;
     });
+    var yr = function(s){ return typeof s.launch_year === 'number' ? s.launch_year : 0; };
     var cmp = {
       az:  function(a, b){ return a.name.localeCompare(b.name); },
-      new: function(a, b){ return b.launch_year - a.launch_year; },
-      old: function(a, b){ return a.launch_year - b.launch_year; },
+      new: function(a, b){ return yr(b) - yr(a); },
+      old: function(a, b){ return yr(a) - yr(b); },
       cat: function(a, b){ return cats.indexOf(a.category) - cats.indexOf(b.category); }
     }[st.sort];
     return r.sort(cmp);
@@ -200,8 +229,9 @@
       '<span class="cat">' + esc(s.category) + '</span>' +
       '<h3><span class="short">' + esc(s.short_name) + '</span>' + esc(s.name) + '</h3>' +
       '<span class="badge' + (leg ? ' legacy' : '') + '"><span class="dot"></span>' + (leg ? 'Legacy · no longer enrolling' : 'Active') + '</span>' +
+      (s.verified ? '' : '<span class="badge verify" title="Not yet checked against the official portal">Needs verification</span>') +
       '<p class="cover">' + esc(s.coverage_amount) + '</p>' +
-      '<p class="min">' + esc(s.ministry) + ' · since ' + s.launch_year + '</p>' +
+      '<p class="min">' + esc(s.ministry) + (s.launch_year ? ' · since ' + s.launch_year : '') + '</p>' +
       '<div class="acts">' +
         '<button class="btn" type="button" data-open="' + s.id + '">View details</button>' +
         '<button class="btn ghost' + (saved ? ' on' : '') + '" type="button" data-save="' + s.id + '" aria-pressed="' + saved + '">' + (saved ? 'Saved' : 'Save') + '</button>' +
@@ -236,6 +266,16 @@
       '<div class="empty"><p><strong>No schemes match these filters.</strong></p><p>Clear a filter or try a shorter search word.</p></div>';
     var heading = st.onlySaved ? 'Saved schemes' : (st.aud ? 'Schemes for this need' : 'Schemes');
     $('resH').innerHTML = heading + ' <span class="pill">' + r.length + '</span>';
+
+    /* Be explicit when the income filter is only as good as its source data. */
+    var warn = $('incWarn');
+    var approx = st.income.trim() ? approxCount(r) : 0;
+    if (st.income.trim() && approx){
+      warn.textContent = approx + ' of these use an approximate income limit — the real test is a BPL or SECC list, not a rupee figure.';
+      warn.hidden = false;
+    } else {
+      warn.hidden = true;
+    }
     $('cat').value = st.cat;
     $('age').value = st.age;
     $('income').value = st.income;
@@ -270,6 +310,7 @@
   /* ---------- detail + compare dialogs ---------- */
   function openDetail(id){
     var s = byId(id);
+    var leg = isLegacy(s);
     $('dTitle').textContent = s.name;
     $('dBody').innerHTML =
       '<p class="d-lead">' + esc(s.description) + '</p>' +
@@ -279,31 +320,40 @@
         dt(ico('users') + '<span>Meant for</span>', esc(s.target_beneficiaries)) +
         dt(ico('activity') + '<span>Age group</span>', (s.age_group || ['all']).map(ageLabel).join(', ')) +
         dt(ico('users') + '<span>Gender</span>', (s.gender || ['all']).map(genderLabel).join(', ')) +
-        dt(ico('rupee') + '<span>Income limit</span>', incomeLimitText(s)) +
+        dt(ico('rupee') + '<span>Income limit</span>', incomeLimitText(s) + incomeNoteText(s)) +
         dt(ico('list') + '<span>Key features</span>',
           '<ul>' + s.key_features.map(function(f){ return '<li>' + esc(f) + '</li>'; }).join('') + '</ul>') +
         dt(ico('flag') + '<span>Run by</span>',
           esc(s.ministry) + (s.implementing_body && s.implementing_body !== s.ministry ? ' through ' + esc(s.implementing_body) : '')) +
-        dt(ico('calendar') + '<span>Type</span>', esc(s.scheme_type) + ', started ' + s.launch_year) +
-        dt(ico(isLegacy(s) ? 'x' : 'check') + '<span>Status</span>',
-          isLegacy(s) ? 'Legacy. No longer enrolling; see PM-JAY.' : 'Active') +
+        dt(ico('calendar') + '<span>Type</span>', esc(s.help_type) + ' · started ' + s.launch_year) +
+        dt(ico(leg ? 'x' : 'check') + '<span>Status</span>',
+          leg ? 'Legacy. No longer enrolling.' : 'Active') +
+        dt(ico(s.verified ? 'check' : 'flag') + '<span>Verification</span>',
+          s.verified
+            ? 'Checked against official sources on 10 September 2026.'
+            : '<strong class="warn">Not yet verified.</strong> ' + esc(s.scheme_type) + ' figures come from general knowledge and may be out of date.') +
         dt(ico('ext') + '<span>Official site</span>',
-          '<a class="btn btn-gold" href="' + esc(s.official_website) + '" target="_blank" rel="noopener noreferrer">Visit official site ' + ico('ext') + '</a>') +
+          s.official_website
+            ? '<a class="btn btn-gold" href="' + esc(s.official_website) + '" target="_blank" rel="noopener noreferrer">Visit official site ' + ico('ext') + '</a>'
+            : 'No official link available.') +
       '</dl>' +
-      '<div class="note">Details last compiled 10 September 2026. Confirm amounts and eligibility on the official site before you apply.</div>';
+      (s.notes ? '<div class="note note-warn">' + esc(s.notes) + '</div>' : '') +
+      '<div class="note">Amounts and eligibility change. Confirm on the official site before you apply.</div>';
     $('dlg').showModal();
   }
 
   function openCompare(){
     var a = st.cmp.map(byId);
     var rows = [
-      ['Type of help', 'category'],
+      ['Category', 'category'],
       ['What it gives', 'coverage_amount'],
       ['Who can use it', 'eligibility'],
       ['Meant for', 'target_beneficiaries'],
+      ['Kind of help', 'help_type'],
       ['Run by', 'ministry'],
       ['Started', 'launch_year'],
-      ['Status', 'status']
+      ['Verification', '_ver'],
+      ['Status', '_status']
     ];
     var h = '<table><thead><tr><th scope="col"></th>' +
       a.map(function(s){ return '<th scope="col">' + esc(s.short_name) + '</th>'; }).join('') +
@@ -312,7 +362,8 @@
       h += '<tr><th scope="row">' + r[0] + '</th>' +
         a.map(function(s){
           var v = s[r[1]];
-          if (r[1] === 'status') v = isLegacy(s) ? 'Legacy' : 'Active';
+          if (r[1] === '_status') v = isLegacy(s) ? 'Legacy' : 'Active';
+          if (r[1] === '_ver') v = s.verified ? 'Verified' : 'Needs verification';
           return '<td>' + esc(v) + '</td>';
         }).join('') + '</tr>';
     });
@@ -492,6 +543,36 @@
     $('pages').style.display = 'none';
   }
 
+  /* Normalise one record so a hand-edited or partial data file can never
+     throw inside a filter. Missing filter metadata means "no restriction". */
+  function normalise(s){
+    return {
+      id: s.id,
+      name: s.name || s.short_name || s.id,
+      short_name: s.short_name || s.id,
+      category: s.category || 'Uncategorised',
+      ministry: s.ministry || '',
+      implementing_body: s.implementing_body || s.ministry || '',
+      launch_year: s.launch_year || null,
+      scheme_type: s.scheme_type || '',
+      help_type: s.help_type || s.scheme_type || 'Uncategorised',
+      status: s.status || 'active',
+      description: s.description || '',
+      coverage_amount: s.coverage_amount || '',
+      eligibility: s.eligibility || '',
+      target_beneficiaries: s.target_beneficiaries || '',
+      official_website: s.official_website || '',
+      key_features: Array.isArray(s.key_features) ? s.key_features : [],
+      audience: Array.isArray(s.audience) ? s.audience : [],
+      age_group: Array.isArray(s.age_group) && s.age_group.length ? s.age_group : ['all'],
+      gender: Array.isArray(s.gender) && s.gender.length ? s.gender : ['all'],
+      income_max_annual: typeof s.income_max_annual === 'number' ? s.income_max_annual : null,
+      income_note: s.income_note || null,
+      verified: s.verified === true,
+      notes: s.notes || null
+    };
+  }
+
   renderSkeletons(PAGE_SIZE);
 
   fetch('assets/data/schemes.json')
@@ -500,7 +581,10 @@
       return r.json();
     })
     .then(function(data){
-      DATA = data;
+      /* accept a bare array, or the source file's { meta, schemes } envelope */
+      var list = Array.isArray(data) ? data : (data && Array.isArray(data.schemes) ? data.schemes : null);
+      if (!list) throw new Error('unexpected JSON shape');
+      DATA = list.map(normalise);
       var count = $('schemeCount');
       if (count) count.textContent = DATA.length;
       populateCategories();
